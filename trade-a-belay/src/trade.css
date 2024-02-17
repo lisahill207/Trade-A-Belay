@@ -1,24 +1,11 @@
 :root {
-  --nav-color: #8f8989;
-  --primary-color: #20252d;
-  --secondary-color: #cccccc;
-  --off-white: #f1f1ee;
-  --opacity: 0.7;
-  --gridGap: 15px;
-  --titleSize: 50pt;
-  --mobileTitleSize: 35pt;
-  --bioSize: 25pt;
-  --mobileBioSize: 15pt;
-  --mobileIconSize: 50pt;
-  --nav-font-size: 12pt;
-  --movementDarkBlue: #001f5b;
-  --movementLightBlue: #009ca6;
-  --movementYellow: #ede04b;
-  --movementGrey: #5b6770;
-  --movementWhite: #fff;
-  --movementBlueGrey: #abb8c3;
-  --movementMidGrey: #c1c6c8;
-  --movementFooterWidth: 80vw;
+  --darkBlue: #001f5b;
+  --lightBlue: #009ca6;
+  --yellow: #ede04b;
+  --grey: #5b6770;
+  --white: #fff;
+  --blueGrey: #abb8c3;
+  --midGrey: #c1c6c8;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -29,19 +16,19 @@ body {
 }
 .fa-angles-down,
 .fa-location-dot,
-.fa-facebook-f,
+.fa-meta,
 .fa-instagram,
 .fa-youtube {
-  color: var(----movementYellow);
+  color: var(--yellow);
 }
 .fa-house {
-  color: var(--movementWhite);
+  color: var(--white);
 }
 .fa-arrow-right {
-  color: var(--movementDarkBlue);
+  color: var(--darkBlue);
 }
 .trade_a_belay {
-  font-family: montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   max-width: 100vw;
 }
@@ -50,18 +37,18 @@ body {
   flex-direction: column;
 }
 .movement_nav_ad {
-  background-color: #001f5b;
+  background-color: var(--darkBlue);
   text-align: center;
-  color: #fff;
+  color: var(--white);
   padding: 16px 0px;
   font-size: 13pt;
 }
 .add_more {
-  color: #ede04b;
+  color: var(--yellow);
   display: inline;
 }
 .movement_small_nav {
-  background-color: #5b6770;
+  background-color: var(--grey);
   display: flex;
   justify-content: flex-end;
   font-size: 10pt;
@@ -75,15 +62,15 @@ body {
   padding: 10px;
 }
 .white {
-  color: #fff;
+  color: var(--white);
 }
 .yellow {
-  color: #ede04b;
+  color: var(--yellow);
 }
 .movement_large_nav {
-  background-color: #001f5b;
+  background-color: var(--darkBlue);
   display: grid;
-  color: #fff;
+  color: var(--white);
   padding: 30px;
 }
 .movement_logo_nav {
@@ -120,7 +107,7 @@ body {
   font-weight: bold;
 }
 .belay_body {
-  background-color: #c1c6c8;
+  background-color: var(--midGrey);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,7 +118,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 90vw;
-  background-color: #5b6770;
+  background-color: var(--grey);
   margin-top: 20px;
 }
 .belay_bio1,
@@ -141,22 +128,22 @@ body {
   justify-content: center;
   align-items: center;
   width: 45vw;
-  border: 2px #abb8c3 solid;
+  border: 2px var(--blueGrey) solid;
   margin-top: 20px;
   padding: 10px;
-  box-shadow: 5px 10px #fff;
+  box-shadow: 5px 10px var(--white);
 }
 .belay_bio1,
 .belay_bio3 {
   align-self: flex-start;
-  background-color: #abb8c3;
-  color: #001f5b;
+  background-color: var(--blueGrey);
+  color: var(--darkBlue);
   margin-left: 20px;
 }
 .belay_bio2 {
   align-self: flex-end;
-  background-color: #abb8c3;
-  color: #001f5b;
+  background-color: var(--blueGrey);
+  color: var(--darkBlue);
   margin-right: 20px;
 }
 .belay_bio3 {
@@ -172,19 +159,19 @@ body {
 .belay_form {
   padding: 20px;
   margin: 20px;
-  background-color: #001f5b;
-  color: #fff;
+  background-color: var(--darkBlue);
+  color: var(--white);
   font-size: 15pt;
 }
 .belay_form_fieldset {
-  border: 2px #fff solid;
+  border: 2px var(--white) solid;
 }
 #movement_name,
 #movement_style,
 #movement_gym,
 #movement_message,
 #movement_contact {
-  background-color: #fff;
+  background-color: var(--white);
   color: black;
   font-size: 15pt;
 }
@@ -196,7 +183,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5b6770;
+  background-color: var(--grey);
   height: 60vh;
 }
 .movement_footer {
@@ -214,8 +201,8 @@ body {
   width: 80vw;
 }
 .movement_footer_newsletter_text {
-  background-color: #ede04b;
-  color: #001f5b;
+  background-color: var(--yellow);
+  color: var(--darkBlue);
   padding: 15px 25px;
   align-self: center;
   font-size: 15pt;
@@ -230,11 +217,11 @@ body {
 .movement_footer_2 {
   display: flex;
   justify-content: flex-start;
-  color: #fff;
+  color: var(--white);
   width: 80vw;
 }
 .footer_box_list {
-  border-right: 1px solid #fff;
+  border-right: 1px solid var(--white);
   padding-right: 10px;
 }
 #footer_box4_list {
@@ -249,7 +236,7 @@ body {
   width: 80vw;
 }
 .movement_copy {
-  color: #fff;
+  color: var(--white);
   align-self: center;
 }
 .movement_logo_vertical {

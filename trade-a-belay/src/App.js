@@ -1,4 +1,4 @@
-import "./trade.css";
+import "./Trade.css";
 import Navbar from "./Navbar.js";
 import BelayBody from "./BelayBody.js";
 import Footer from "./Footer.js";
