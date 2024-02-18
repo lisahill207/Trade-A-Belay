@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
 
 export default function BelayForm({ addBio }) {
   const [nameAnswer, setNameAnswer] = useState("");
@@ -8,6 +8,12 @@ export default function BelayForm({ addBio }) {
   const [gymAnswer, setGymAnswer] = useState("");
   const [phoneAnswer, setPhoneAnswer] = useState("");
   const [messageAnswer, setMessageAnswer] = useState("");
+  /*const [photoAnswer, setPhotoAnswer] = useState([]);*/
+  const [file, setFile] = useState();
+
+  function handlePhoto(e) {
+    setFile(URL.createObjectURL(e.target.files[0]));
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -16,14 +22,25 @@ export default function BelayForm({ addBio }) {
     if (gymAnswer === "") return;
     if (phoneAnswer === "") return;
     if (messageAnswer === "") return;
+    if (file === "") return;
+    /*if (photoAnswer === "") return;*/
 
-    addBio(nameAnswer, styleAnswer, gymAnswer, phoneAnswer, messageAnswer);
+    addBio(
+      nameAnswer,
+      styleAnswer,
+      gymAnswer,
+      phoneAnswer,
+      messageAnswer,
+      file
+    );
 
     setNameAnswer("");
     setStyleAnswer("");
     setGymAnswer("");
     setPhoneAnswer("");
     setMessageAnswer("");
+    setFile("");
+    /*setPhotoAnswer("");*/
   }
   return (
     <div className="form">
@@ -107,8 +124,14 @@ export default function BelayForm({ addBio }) {
           ></textarea>
           <div className="image-upload-container">
             <label htmlFor="input-file" id="drop-area">
-              <input type="file" accept="image/*" id="input-file" hidden />
-              <div id="img-view">
+              <input
+                onChange={handlePhoto}
+                type="file"
+                accept="image/*"
+                id="input-file"
+                hidden
+              />
+              <div id="image-view">
                 <FontAwesomeIcon icon={faArrowUpFromBracket} />
                 <p>Drag and drop or click here to upload a profile photo</p>
               </div>

@@ -7,9 +7,11 @@ export default function NewBio({
   gymAnswer,
   phoneAnswer,
   messageAnswer,
+  file,
 }) {
   return (
     <div className="bio" key={key}>
+      <img src={file} className="bio_img" alt="Not found" />
       <div className="bio_content">
         <div className="bio_name">
           <div className="bio_question">Name:</div>

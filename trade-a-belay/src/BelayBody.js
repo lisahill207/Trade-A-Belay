@@ -10,7 +10,8 @@ export default function BelayBody() {
     styleAnswer,
     gymAnswer,
     phoneAnswer,
-    messageAnswer
+    messageAnswer,
+    file
   ) {
     setBios((currentBios) => {
       return [
@@ -22,6 +23,7 @@ export default function BelayBody() {
           gymAnswer,
           phoneAnswer,
           messageAnswer,
+          file
         },
       ];
     });
