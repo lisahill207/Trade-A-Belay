@@ -48,7 +48,6 @@ export default function BelayForm({ addBio }) {
             onChange={(e) => setStyleAnswer(e.target.value)}
             defaultValue=""
             id="style"
-            name="style"
             tabindex="2"
           >
             <option value="" disabled>
@@ -106,14 +105,15 @@ export default function BelayForm({ addBio }) {
             required
             aria-required="true"
           ></textarea>
-          <label htmlFor="input-file" id="drop-area">
-            <input type="file" accept="image/*" id="input-file" hidden />
-            <div id="img-view">
-              <FontAwesomeIcon icon={faArrowUpFromBracket} />
-              <p>Drag and drop or click here to upload image</p>
-            </div>
-          </label>
-          <br />
+          <div className="image-upload-container">
+            <label htmlFor="input-file" id="drop-area">
+              <input type="file" accept="image/*" id="input-file" hidden />
+              <div id="img-view">
+                <FontAwesomeIcon icon={faArrowUpFromBracket} />
+                <p>Drag and drop or click here to upload a profile photo</p>
+              </div>
+            </label>
+          </div>
           <button className="post">Post!</button>
         </fieldset>
       </form>
