@@ -7,7 +7,7 @@ export default function BelayBios({ deleteBio, bios }) {
       <StaticBios />
       {bios.length === 0 && ""}
       {bios.map((bio) => {
-        return <NewBio deleteBio={deleteBio} />;
+        return <NewBio {...bio} key={bio.id} deleteBio={deleteBio} />;
       })}
     </div>
   );

@@ -5,7 +5,7 @@ import Bio3 from "./Images/belay_bio3.jpg";
 export default function () {
   return (
     <>
-      <div className="bio1">
+      <div className="bio">
         <img
           src={Bio1}
           className="bio_img"
@@ -17,7 +17,7 @@ export default function () {
             <div className="bio_answer">Lisa</div>
           </div>
           <div className="bio_style">
-            <div className="bio_question">Preferred Climbing Style:</div>
+            <div className="bio_question">Climbing Style:</div>
             <div className="bio_answer">Top Rope</div>
           </div>
           <div className="bio_gym">
@@ -26,7 +26,7 @@ export default function () {
           </div>
           <div className="bio_phone">
             <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">XXX-XXX-XXXX</div>
+            <div className="bio_answer">123-456-7890</div>
           </div>
           <div className="bio_message">
             <div className="bio_question">Message:</div>
@@ -38,7 +38,7 @@ export default function () {
           </div>
         </div>
       </div>
-      <div className="bio2">
+      <div className="bio">
         <img
           src={Bio2}
           className="bio_img"
@@ -50,7 +50,7 @@ export default function () {
             <div className="bio_answer">Kelly</div>
           </div>
           <div className="bio_style">
-            <div className="bio_question">Preferred Climbing Style:</div>
+            <div className="bio_question">Climbing Style:</div>
             <div className="bio_answer">Boulder</div>
           </div>
           <div className="bio_gym">
@@ -59,7 +59,7 @@ export default function () {
           </div>
           <div className="bio_phone">
             <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">XXX-XXX-XXXX</div>
+            <div className="bio_answer">234-567-8901</div>
           </div>
           <div className="bio_message">
             <div className="bio_question">Message:</div>
@@ -71,7 +71,7 @@ export default function () {
           </div>
         </div>
       </div>
-      <div className="bio3">
+      <div className="bio">
         <img
           src={Bio3}
           className="bio_img"
@@ -83,7 +83,7 @@ export default function () {
             <div className="bio_answer">Julie</div>
           </div>
           <div className="bio_style">
-            <div className="bio_question">Preferred Climbing Style:</div>
+            <div className="bio_question">Climbing Style:</div>
             <div className="bio_answer">Top Rope</div>
           </div>
           <div className="bio_gym">
@@ -92,7 +92,7 @@ export default function () {
           </div>
           <div className="bio_phone">
             <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">XXX-XXX-XXXX</div>
+            <div className="bio_answer">345-678-9012</div>
           </div>
           <div className="bio_message">
             <div className="bio_question">Message:</div>

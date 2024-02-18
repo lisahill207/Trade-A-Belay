@@ -5,20 +5,36 @@ import BelayForm from "./BelayForm";
 export default function BelayBody() {
   const [bios, setBios] = useState([]);
 
-  function addBio() {
+  function addBio(
+    nameAnswer,
+    styleAnswer,
+    gymAnswer,
+    phoneAnswer,
+    messageAnswer
+  ) {
     setBios((currentBios) => {
-      return [...currentBios, { id: crypto.randomUUID() }];
+      return [
+        ...currentBios,
+        {
+          id: crypto.randomUUID(),
+          nameAnswer,
+          styleAnswer,
+          gymAnswer,
+          phoneAnswer,
+          messageAnswer,
+        },
+      ];
     });
   }
-  function deleteBio(bioId) {
+  function deleteBio(id) {
     setBios((currentBios) => {
-      return currentBios.filter((bio) => bio.id !== bioId);
+      return currentBios.filter((bio) => bio.id !== id);
     });
   }
   return (
     <div className="belay_content">
-      <BelayBios deleteBio={deleteBio} bios={bios} />
-      <BelayForm addBio={addBio} bios={bios} />
+      <BelayBios bios={bios} deleteBio={deleteBio} />
+      <BelayForm addBio={addBio} />
     </div>
   );
 }
