@@ -4,7 +4,7 @@ import LargeNav from "./LargeNav";
 
 export default function Navbar() {
   return (
-    <nav className="movement_navbar">
+    <nav className="navbar">
       <NavAd />
       <SmallNav />
       <LargeNav />

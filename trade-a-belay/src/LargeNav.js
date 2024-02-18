@@ -4,8 +4,8 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 export default function LargeNav() {
   return (
-    <div className="movement_large_nav">
-      <div className="movement_logo_nav"></div>
+    <div className="large_nav">
+      <div className="logo_nav"></div>
       <ul className="large_nav_list">
         <li className="large_nav_item">WHY US</li>
         <li className="large_nav_item">FIRST VISIT</li>

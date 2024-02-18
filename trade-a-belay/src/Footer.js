@@ -4,8 +4,8 @@ import Footer3 from "./Footer3";
 
 export default function Footer() {
   return (
-    <footer className="movement_footer_main">
-      <div className="movement_footer">
+    <footer className="footer_container">
+      <div className="footer">
         <Footer1 />
         <Footer2 />
         <Footer3 />

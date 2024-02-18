@@ -5,7 +5,7 @@ import Footer from "./Footer.js";
 
 export default function App() {
   return (
-    <body className="trade_a_belay">
+    <body>
       <Navbar />
       <BelayBody />
       <Footer />

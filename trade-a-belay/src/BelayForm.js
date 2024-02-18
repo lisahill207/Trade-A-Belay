@@ -1,29 +1,25 @@
-export default function BelayForm() {
+export default function BelayForm({ addBio }) {
+  function handleSubmit(e) {
+    e.preventDefault();
+    addBio();
+  }
   return (
-    <div className="belay_form">
-      <form>
-        <fieldset className="belay_form_fieldset">
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <fieldset className="form_fieldset">
           <legend>Build Your Profile</legend>
-          <label for="movement_name">First & Last Name</label>
-          <input
-            type="text"
-            id="movement_name"
-            name="movement_name"
-            tabindex="1"
-            placeholder="First Last"
-            required
-            aria-required="true"
-          />
+          <label htmlFor="name">First & Last Name</label>
+          <input type="text" id="name" tabindex="1" placeholder="First Last" />
           <br />
-          <label for="movement_style">Climbing Style</label>
-          <select id="movement_style" name="movement_style" tabindex="3">
+          <label htmlFor="style">Climbing Style</label>
+          <select id="style" name="style" tabindex="3">
             <option value="boulder">Boulder</option>
             <option value="topRope">Top Rope</option>
             <option value="lead">Lead</option>
           </select>
           <br />
-          <label for="movement_gym">Home Gym</label>
-          <select id="movement_gym" name="movement_gym" tabindex="4">
+          <label htmlFor="gym">Home Gym</label>
+          <select id="gym" name="gym" tabindex="4">
             <option value="timonium">Timonium</option>
             <option value="hampden">Hampden</option>
             <option value="columbia">Columbia</option>
@@ -31,21 +27,21 @@ export default function BelayForm() {
             <option value="rockville">Rockville</option>
           </select>
           <br />
-          <label for="movement_contact">Phone Number</label>
+          <label htmlFor="contact">Phone Number</label>
           <input
             type="tel"
-            id="movement_contact"
-            name="movement_contact"
+            id="contact"
+            name="contact"
             tabindex="5"
             placeholder="XXX-XXX-XXXX"
             required
             aria-required="true"
           />
           <br />
-          <label for="movement_message">Message</label>
+          <label htmlFor="message">Message</label>
           <textarea
-            id="movement_message"
-            name="movement_message"
+            id="message"
+            name="message"
             rows="4"
             cols="50"
             placeholder="Introduce yourself..."
@@ -54,7 +50,7 @@ export default function BelayForm() {
             aria-required="true"
           ></textarea>
           <br />
-          <button className="movement_post">Post!</button>
+          <button className="post">Post!</button>
         </fieldset>
       </form>
     </div>

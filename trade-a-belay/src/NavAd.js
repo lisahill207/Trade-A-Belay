@@ -3,9 +3,9 @@ import { faAnglesDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function NavAd() {
   return (
-    <div className="movement_nav_ad">
+    <div className="nav_ad">
       Short-Term Summer Membership Sale: Destination Summer
-      <div className="add_more">
+      <div className="ad_more">
         More <FontAwesomeIcon icon={faAnglesDown} />
       </div>
     </div>

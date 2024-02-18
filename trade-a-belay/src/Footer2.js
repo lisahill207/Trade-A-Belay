@@ -1,6 +1,6 @@
 export default function Footer2() {
   return (
-    <div className="movement_footer_2">
+    <div className="footer_2">
       <ul className="footer_box_list" id="footer_box1_list">
         <li className="footer_box_item">WHY US</li>
         <li className="footer_box_item">FIRST VISIT</li>

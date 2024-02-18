@@ -9,10 +9,12 @@
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
-  width: 100vw;
-  height: 100vh;
+  width: 100dvw;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  max-width: 100vw;
 }
 .fa-angles-down,
 .fa-location-dot,
@@ -24,34 +26,28 @@ body {
 .fa-house {
   color: var(--white);
 }
-.fa-arrow-right {
-  color: var(--darkBlue);
-}
-.trade_a_belay {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  max-width: 100vw;
-}
-.movement_nav_bar {
+.nav_bar {
   display: flex;
   flex-direction: column;
 }
-.movement_nav_ad {
+.nav_ad {
   background-color: var(--darkBlue);
   text-align: center;
   color: var(--white);
   padding: 16px 0px;
   font-size: 13pt;
 }
-.add_more {
+.ad_more {
   color: var(--yellow);
   display: inline;
+  margin-left: 15px;
 }
-.movement_small_nav {
+.small_nav {
   background-color: var(--grey);
   display: flex;
   justify-content: flex-end;
   font-size: 10pt;
+  padding-right: 10px;
 }
 .small_nav_list {
   list-style: none;
@@ -67,13 +63,13 @@ body {
 .yellow {
   color: var(--yellow);
 }
-.movement_large_nav {
+.large_nav {
   background-color: var(--darkBlue);
   display: grid;
   color: var(--white);
   padding: 30px;
 }
-.movement_logo_nav {
+.logo_nav {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -96,6 +92,9 @@ body {
   padding: 10px;
   font-weight: bold;
 }
+.fa-location-dot {
+  padding-right: 5px;
+}
 .large_nav_location {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -106,7 +105,7 @@ body {
   align-items: center;
   font-weight: bold;
 }
-.belay_body {
+.belay_content {
   background-color: var(--midGrey);
   display: flex;
   flex-direction: column;
@@ -114,16 +113,16 @@ body {
   align-items: center;
   width: 100vw;
 }
-.belay_bios {
+.bios {
   display: flex;
   flex-direction: column;
   width: 90vw;
   background-color: var(--grey);
   margin-top: 20px;
 }
-.belay_bio1,
-.belay_bio2,
-.belay_bio3 {
+.bio1,
+.bio2,
+.bio3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,88 +132,92 @@ body {
   padding: 10px;
   box-shadow: 5px 10px var(--white);
 }
-.belay_bio1,
-.belay_bio3 {
+.bio1,
+.bio3 {
   align-self: flex-start;
   background-color: var(--blueGrey);
   color: var(--darkBlue);
   margin-left: 20px;
 }
-.belay_bio2 {
+.bio2 {
   align-self: flex-end;
   background-color: var(--blueGrey);
   color: var(--darkBlue);
   margin-right: 20px;
 }
-.belay_bio3 {
+.bio3 {
   margin-bottom: 30px;
 }
-.movement_bio_img {
+.bio_img {
   width: 250px;
   padding-right: 20px;
 }
-.belay_bio_question {
+.bio_question {
   font-weight: bold;
 }
-.belay_form {
+.form {
   padding: 20px;
   margin: 20px;
   background-color: var(--darkBlue);
   color: var(--white);
   font-size: 15pt;
 }
-.belay_form_fieldset {
+.form_fieldset {
   border: 2px var(--white) solid;
 }
-#movement_name,
-#movement_style,
-#movement_gym,
-#movement_message,
-#movement_contact {
+#name,
+#style,
+#gym,
+#message,
+#contact {
   background-color: var(--white);
   color: black;
   font-size: 15pt;
 }
-.movement_post {
+.post {
   font-size: 15pt;
   border-radius: 5px;
 }
-.movement_footer_main {
+.footer_container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--grey);
-  height: 60vh;
+  width: 100dvw;
 }
-.movement_footer {
+.footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 80vw;
-  height: 40vh;
+  width: 80dvw;
+  margin: 20px;
 }
-.movement_footer_1 {
+.footer_1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 80vw;
 }
-.movement_footer_newsletter_text {
+.footer_newsletter_text {
   background-color: var(--yellow);
   color: var(--darkBlue);
   padding: 15px 25px;
   align-self: center;
   font-size: 15pt;
 }
-.movement_footer_social {
+.fa-arrow-right {
+  color: var(--darkBlue);
+  padding-left: 5px;
+}
+.footer_social {
   align-self: center;
   font-size: 22pt;
   display: flex;
   justify-content: space-between;
   width: 150px;
 }
-.movement_footer_2 {
+.footer_2 {
   display: flex;
   justify-content: flex-start;
   color: var(--white);
@@ -230,15 +233,15 @@ body {
 .footer_box_item {
   list-style: none;
 }
-.movement_footer_3 {
+.footer_3 {
   display: flex;
   justify-content: space-between;
   width: 80vw;
 }
-.movement_copy {
+.copy {
   color: var(--white);
   align-self: center;
 }
-.movement_logo_vertical {
+.logo_vertical {
   height: 90px;
 }

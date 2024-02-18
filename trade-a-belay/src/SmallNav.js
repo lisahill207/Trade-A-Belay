@@ -1,6 +1,6 @@
 export default function SmallNav() {
   return (
-    <div className="movement_small_nav">
+    <div className="small_nav">
       <ul className="small_nav_list">
         <li className="small_nav_item white">ACCOUNT CHANGES</li>
         <li className="small_nav_item white">BLOG</li>
