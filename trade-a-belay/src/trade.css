@@ -189,6 +189,9 @@ textarea {
   border-radius: 20px;
   color: var(--darkBlue);
 }
+#drop-area.highlight {
+  border-color: var(--yellow);
+}
 #image-view {
   text-align: center;
   width: 100%;

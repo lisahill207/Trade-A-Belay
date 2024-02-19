@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
+import ImgUpload from "./ImgUpload";
 
 export default function BelayForm({ addBio }) {
   const [nameAnswer, setNameAnswer] = useState("");
@@ -8,7 +7,6 @@ export default function BelayForm({ addBio }) {
   const [gymAnswer, setGymAnswer] = useState("");
   const [phoneAnswer, setPhoneAnswer] = useState("");
   const [messageAnswer, setMessageAnswer] = useState("");
-  /*const [photoAnswer, setPhotoAnswer] = useState([]);*/
   const [file, setFile] = useState();
 
   function handlePhoto(e) {
@@ -23,7 +21,6 @@ export default function BelayForm({ addBio }) {
     if (phoneAnswer === "") return;
     if (messageAnswer === "") return;
     if (file === "") return;
-    /*if (photoAnswer === "") return;*/
 
     addBio(
       nameAnswer,
@@ -40,7 +37,6 @@ export default function BelayForm({ addBio }) {
     setPhoneAnswer("");
     setMessageAnswer("");
     setFile("");
-    /*setPhotoAnswer("");*/
   }
   return (
     <div className="form">
@@ -122,21 +118,7 @@ export default function BelayForm({ addBio }) {
             required
             aria-required="true"
           ></textarea>
-          <div className="image-upload-container">
-            <label htmlFor="input-file" id="drop-area">
-              <input
-                onChange={handlePhoto}
-                type="file"
-                accept="image/*"
-                id="input-file"
-                hidden
-              />
-              <div id="image-view">
-                <FontAwesomeIcon icon={faArrowUpFromBracket} />
-                <p>Drag and drop or click here to upload a profile photo</p>
-              </div>
-            </label>
-          </div>
+          <ImgUpload handlePhoto={handlePhoto} />
           <button className="post">Post!</button>
         </fieldset>
       </form>
