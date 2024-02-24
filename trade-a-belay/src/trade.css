@@ -6,7 +6,7 @@
   --white: #fff;
   --blueGrey: #abb8c3;
   --midGrey: #c1c6c8;
-  --dots: #66666650;
+  --dots: #66666660;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -118,15 +118,15 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  width: 100dvw;
 }
 .bios {
-  width: 98dvw;
-  background-color: var(--midGrey);
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 98dvw;
+  background-color: var(--midGrey);
+  margin-top: 20px;
 }
 .outer-dots {
   width: 97dvw;
@@ -134,14 +134,15 @@ textarea {
   justify-content: center;
   align-items: center;
   margin: 5px 0px;
-  background-image: radial-gradient(
-    var(--dots) 10%,
-    var(--midGrey) 15%,
-    var(--midGrey) 80%
-  );
-  background-position: left;
+  background: radial-gradient(
+        var(--dots) 10%,
+        var(--midGrey) 15%,
+        var(--midGrey) 80%
+      )
+      left repeat-y,
+    radial-gradient(var(--dots) 10%, var(--midGrey) 15%, var(--midGrey) 80%)
+      right repeat-y;
   background-size: 20px 20px;
-  background-repeat: repeat-y;
 }
 .inner-dots {
   width: 95dvw;
@@ -149,14 +150,15 @@ textarea {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: flex-start;
-  background-image: radial-gradient(
-    var(--dots) 10%,
-    var(--midGrey) 15%,
-    var(--midGrey) 80%
-  );
-  background-position: left;
+  background: radial-gradient(
+        var(--dots) 10%,
+        var(--midGrey) 15%,
+        var(--midGrey) 80%
+      )
+      left repeat-y,
+    radial-gradient(var(--dots) 10%, var(--midGrey) 15%, var(--midGrey) 80%)
+      right repeat-y;
   background-size: 20px 20px;
-  background-repeat: repeat-y;
 }
 .bio {
   display: flex;
@@ -181,14 +183,15 @@ textarea {
   font-weight: bold;
 }
 .form {
-  padding: 20px;
-  margin: 20px;
+  width: 98dvw;
   background-color: var(--darkBlue);
   color: var(--white);
   font-size: 15pt;
+  margin-bottom: 20px;
 }
 .form_fieldset {
   border: 2px var(--white) solid;
+  margin: 3dvw;
 }
 
 #name,
