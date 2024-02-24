@@ -1,22 +1,19 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowUpFromBracket } from "@fortawesome/free-solid-svg-icons";
-
 export default function ImgUpload({ handlePhoto }) {
   return (
-    <div className="image-upload-container">
-      <label htmlFor="input-file" id="drop-area">
+    <div className="file-container">
+      <div className="button-wrap">
+        <label class="upload-button" htmlFor="input-file">
+          Upload Photo
+        </label>
         <input
           onChange={handlePhoto}
           type="file"
           accept="image/*"
           id="input-file"
-          hidden
+          tabIndex="6"
+          required
         />
-        <div id="image-view">
-          <FontAwesomeIcon icon={faArrowUpFromBracket} />
-          <p>Click here to upload a profile photo</p>
-        </div>
-      </label>
+      </div>
     </div>
   );
 }
