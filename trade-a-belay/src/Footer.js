@@ -4,7 +4,7 @@ import Footer3 from "./Footer3";
 
 export default function Footer() {
   return (
-    <footer className="footer_container">
+    <footer className="footer-container">
       <div className="footer">
         <Footer1 />
         <Footer2 />

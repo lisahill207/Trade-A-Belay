@@ -1,27 +1,27 @@
 export default function Footer2() {
   return (
-    <div className="footer_2">
-      <ul className="footer_box_list" id="footer_box1_list">
-        <li className="footer_box_item">WHY US</li>
-        <li className="footer_box_item">FIRST VISIT</li>
-        <li className="footer_box_item">MEDIA CENTER</li>
+    <div className="footer-2">
+      <ul className="footer-box-list" id="footer-box1-list">
+        <li className="footer-box-item">WHY US</li>
+        <li className="footer-box-item">FIRST VISIT</li>
+        <li className="footer-box-item">MEDIA CENTER</li>
       </ul>
-      <ul className="footer_box_list" id="footer_box2_list">
-        <li className="footer_box_item">ACCOUNT</li>
-        <li className="footer_box_item">BLOG</li>
-        <li className="footer_box_item">WAIVER</li>
-        <li className="footer_box_item">MEMBERSHIP</li>
+      <ul className="footer-box-list" id="footer-box2-list">
+        <li className="footer-box-item">ACCOUNT</li>
+        <li className="footer-box-item">BLOG</li>
+        <li className="footer-box-item">WAIVER</li>
+        <li className="footer-box-item">MEMBERSHIP</li>
       </ul>
-      <ul className="footer_box_list" id="footer_box3_list">
-        <li className="footer_box_item">CONTACT US</li>
-        <li className="footer_box_item">CAREERS</li>
-        <li className="footer_box_item">FAQS</li>
+      <ul className="footer-box-list" id="footer-box3-list">
+        <li className="footer-box-item">CONTACT US</li>
+        <li className="footer-box-item">CAREERS</li>
+        <li className="footer-box-item">FAQS</li>
       </ul>
-      <ul className="footer_box_list" id="footer_box4_list">
-        <li className="footer_box_item">GIFT CARDS</li>
-        <li className="footer_box_item">PRIVACY POLICY</li>
-        <li className="footer_box_item">OPT OUT</li>
-        <li className="footer_box_item">YOUTH PROTECTION COMMITTEE</li>
+      <ul className="footer-box-list" id="footer-box4-list">
+        <li className="footer-box-item">GIFT CARDS</li>
+        <li className="footer-box-item">PRIVACY POLICY</li>
+        <li className="footer-box-item">OPT OUT</li>
+        <li className="footer-box-item">YOUTH PROTECTION COMMITTEE</li>
       </ul>
     </div>
   );

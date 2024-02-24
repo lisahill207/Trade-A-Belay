@@ -23,7 +23,7 @@ export default function BelayBody() {
           gymAnswer,
           phoneAnswer,
           messageAnswer,
-          file
+          file,
         },
       ];
     });
@@ -34,7 +34,7 @@ export default function BelayBody() {
     });
   }
   return (
-    <div className="belay_content">
+    <div className="belay-content">
       <BelayBios bios={bios} deleteBio={deleteBio} />
       <BelayForm addBio={addBio} />
     </div>

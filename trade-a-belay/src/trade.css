@@ -33,34 +33,34 @@ textarea {
 .fa-house {
   color: var(--white);
 }
-.nav_bar {
+.nav-bar {
   display: flex;
   flex-direction: column;
 }
-.nav_ad {
+.nav-ad {
   background-color: var(--darkBlue);
   text-align: center;
   color: var(--white);
   padding: 16px 0px;
   font-size: 13pt;
 }
-.ad_more {
+.ad-more {
   color: var(--yellow);
   display: inline;
   margin-left: 15px;
 }
-.small_nav {
+.small-nav {
   background-color: var(--grey);
   display: flex;
   justify-content: flex-end;
   font-size: 10pt;
   padding-right: 10px;
 }
-.small_nav_list {
+.small-nav-list {
   list-style: none;
   font-weight: bold;
 }
-.small_nav_item {
+.small-nav-item {
   display: inline;
   padding: 10px;
 }
@@ -70,13 +70,13 @@ textarea {
 .yellow {
   color: var(--yellow);
 }
-.large_nav {
+.large-nav {
   background-color: var(--darkBlue);
   display: grid;
   color: var(--white);
   padding: 30px;
 }
-.logo_nav {
+.logo-nav {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
@@ -87,13 +87,13 @@ textarea {
   background-size: cover;
   width: 268px;
 }
-.large_nav_list {
+.large-nav-list {
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-.large_nav_item {
+.large-nav-item {
   display: inline;
   list-style: none;
   padding: 10px;
@@ -102,7 +102,7 @@ textarea {
 .fa-location-dot {
   padding-right: 5px;
 }
-.large_nav_location {
+.large-nav-location {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -112,7 +112,7 @@ textarea {
   align-items: center;
   font-weight: bold;
 }
-.belay_content {
+.belay-content {
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -165,22 +165,43 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30vw;
+  width: 400px;
   border: 2px var(--blueGrey) solid;
   margin: 20px;
-  padding: 10px;
-  box-shadow: 5px 5px var(--white);
-  background-color: var(--blueGrey);
-  color: var(--darkBlue);
+  background-color: var(--lightBlue);
+  color: var(--white);
+  font-size: 12pt;
 }
 
-.bio_img {
-  max-height: 200px;
-  max-width: 300px;
-  padding-right: 10px;
+.bio-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
 }
-.bio_question {
+.bio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 15px 10px;
+}
+.bio-left {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-evenly;
+}
+.bio-right {
+  width: 66%;
+}
+.bio-name {
   font-weight: bold;
+  font-size: 18pt;
+  margin-bottom: 5px;
+}
+.name-line {
+  width: 40px;
+  border-bottom: solid var(--white) 2px;
+  padding: 2px;
 }
 .form {
   width: 98dvw;
@@ -189,7 +210,7 @@ textarea {
   font-size: 15pt;
   margin-bottom: 20px;
 }
-.form_fieldset {
+.form-fieldset {
   border: 2px var(--white) solid;
   margin: 3dvw;
 }
@@ -239,7 +260,7 @@ textarea {
   font-size: 15pt;
   border-radius: 5px;
 }
-.footer_container {
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,13 +275,13 @@ textarea {
   width: 80dvw;
   margin: 20px;
 }
-.footer_1 {
+.footer-1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 80vw;
 }
-.footer_newsletter_text {
+.footer-newsletter-text {
   background-color: var(--yellow);
   color: var(--darkBlue);
   padding: 15px 25px;
@@ -271,30 +292,30 @@ textarea {
   color: var(--darkBlue);
   padding-left: 5px;
 }
-.footer_social {
+.footer-social {
   align-self: center;
   font-size: 22pt;
   display: flex;
   justify-content: space-between;
   width: 150px;
 }
-.footer_2 {
+.footer-2 {
   display: flex;
   justify-content: flex-start;
   color: var(--white);
   width: 80vw;
 }
-.footer_box_list {
+.footer-box-list {
   border-right: 1px solid var(--white);
   padding-right: 10px;
 }
-#footer_box4_list {
+#footer-box4-list {
   border: none;
 }
-.footer_box_item {
+.footer-box-item {
   list-style: none;
 }
-.footer_3 {
+.footer-3 {
   display: flex;
   justify-content: space-between;
   width: 80vw;
@@ -303,6 +324,6 @@ textarea {
   color: var(--white);
   align-self: center;
 }
-.logo_vertical {
+.logo-vertical {
   height: 90px;
 }

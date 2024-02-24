@@ -41,7 +41,7 @@ export default function BelayForm({ addBio }) {
   return (
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <fieldset className="form_fieldset">
+        <fieldset className="form-fieldset">
           <legend>Build Your Profile</legend>
           <label htmlFor="name">First & Last Name</label>
           <input

@@ -5,7 +5,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 export default function FooterSocial() {
   return (
-    <div className="footer_social">
+    <div className="footer-social">
       <FontAwesomeIcon icon={faMeta} />
       <FontAwesomeIcon icon={faInstagram} />
       <FontAwesomeIcon icon={faYoutube} />

@@ -2,35 +2,27 @@ import Bio1 from "./Images/belay_bio1.jpeg";
 import Bio2 from "./Images/belay_bio2.jpg";
 import Bio3 from "./Images/belay_bio3.jpg";
 
-export default function () {
+export default function StaticBios() {
   return (
     <>
       <div className="bio">
         <img
           src={Bio1}
-          className="bio_img"
+          className="bio-img"
           alt="Lisa standing in front of a steep rocky hill in Portugal."
         />
-        <div className="bio_content">
-          <div className="bio_name">
-            <div className="bio_question">Name:</div>
-            <div className="bio_answer">Lisa</div>
+        <div className="bio-content">
+          <div className="bio-left">
+            <div className="bio-name">
+              <div className="bio-answer">Lisa</div>
+              <div className="name-line"> </div>
+            </div>
+            <div className="bio-answer">Top Rope</div>
+            <div className="bio-answer">Timonium</div>
+            <div className="bio-answer">123-456-7890</div>
           </div>
-          <div className="bio_style">
-            <div className="bio_question">Climbing Style:</div>
-            <div className="bio_answer">Top Rope</div>
-          </div>
-          <div className="bio_gym">
-            <div className="bio_question">Home Gym:</div>
-            <div className="bio_answer">Timonium</div>
-          </div>
-          <div className="bio_phone">
-            <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">123-456-7890</div>
-          </div>
-          <div className="bio_message">
-            <div className="bio_question">Message:</div>
-            <div className="bio_answer">
+          <div className="bio-right">
+            <div className="bio-answer">
               I'm looking for a climbing partner for Tuesday and/or Thursday
               evenings. I'm available between 6-10pm. Lead climbing certified
               but priority is Top Rope. Call or text!
@@ -41,29 +33,21 @@ export default function () {
       <div className="bio">
         <img
           src={Bio2}
-          className="bio_img"
+          className="bio-img"
           alt="Female crouching in the mouth of a cave."
         />
-        <div className="bio_content">
-          <div className="bio_name">
-            <div className="bio_question">Name:</div>
-            <div className="bio_answer">Kelly</div>
+        <div className="bio-content">
+          <div className="bio-left">
+            <div className="bio-name">
+              <div className="bio-answer">Kelly</div>
+              <div className="name-line"> </div>
+            </div>
+            <div className="bio-answer">Boulder</div>
+            <div className="bio-answer">Hampden</div>
+            <div className="bio-answer">234-567-8901</div>
           </div>
-          <div className="bio_style">
-            <div className="bio_question">Climbing Style:</div>
-            <div className="bio_answer">Boulder</div>
-          </div>
-          <div className="bio_gym">
-            <div className="bio_question">Home Gym:</div>
-            <div className="bio_answer">Hampden</div>
-          </div>
-          <div className="bio_phone">
-            <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">234-567-8901</div>
-          </div>
-          <div className="bio_message">
-            <div className="bio_question">Message:</div>
-            <div className="bio_answer">
+          <div className="bio-right">
+            <div className="bio-answer">
               I boulder at Hampden before work Monday, Wednesday, and Friday.
               Always looking for more people to join for an early morning sweat
               sesh!
@@ -74,29 +58,21 @@ export default function () {
       <div className="bio">
         <img
           src={Bio3}
-          className="bio_img"
+          className="bio-img"
           alt="Female with red hair wearing a backpacking pack and carrying trekking poles."
         />
-        <div className="bio_content">
-          <div className="bio_name">
-            <div className="bio_question">Name:</div>
-            <div className="bio_answer">Julie</div>
+        <div className="bio-content">
+          <div className="bio-left">
+            <div className="bio-name">
+              <div className="bio-answer">Julie</div>
+              <div className="name-line"> </div>
+            </div>
+            <div className="bio-answer">Top Rope</div>
+            <div className="bio-answer">Hampden</div>
+            <div className="bio-answer">345-678-9012</div>
           </div>
-          <div className="bio_style">
-            <div className="bio_question">Climbing Style:</div>
-            <div className="bio_answer">Top Rope</div>
-          </div>
-          <div className="bio_gym">
-            <div className="bio_question">Home Gym:</div>
-            <div className="bio_answer">Hampden</div>
-          </div>
-          <div className="bio_phone">
-            <div className="bio_question">Phone Number:</div>
-            <div className="bio_answer">345-678-9012</div>
-          </div>
-          <div className="bio_message">
-            <div className="bio_question">Message:</div>
-            <div className="bio_answer">
+          <div className="bio-right">
+            <div className="bio-message">
               I mostly climb on the weekends at Columbia or Crystal City. Have a
               group of females and we're always open to newcomers! Text me for
               our next climbing time!
