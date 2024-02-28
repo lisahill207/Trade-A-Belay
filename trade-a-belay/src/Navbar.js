@@ -1,6 +1,7 @@
 import NavAd from "./NavAd";
 import SmallNav from "./SmallNav";
 import LargeNav from "./LargeNav";
+import NavMobile from "./NavMobile";
 
 export default function Navbar() {
   return (
@@ -8,6 +9,7 @@ export default function Navbar() {
       <NavAd />
       <SmallNav />
       <LargeNav />
+      <NavMobile />
     </nav>
   );
 }
