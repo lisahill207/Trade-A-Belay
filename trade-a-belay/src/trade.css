@@ -45,6 +45,7 @@ textarea {
   color: var(--white);
   padding: 16px 0px;
   font-size: 13pt;
+  width: 100dvw;
 }
 .ad-more {
   color: var(--yellow);
@@ -411,7 +412,7 @@ input[type="file"] {
   }
 
   .movementMobileLogo {
-    width: 250px;
+    width: 200px;
     padding: 20px;
   }
   .mobileHeaderRight {
@@ -512,6 +513,9 @@ input[type="file"] {
     width: 100dvw;
     margin: 0px;
   }
+  .bio {
+    margin: 10px, 0px;
+  }
   .outer-dots,
   .inner-dots {
     background: none;
@@ -526,6 +530,15 @@ input[type="file"] {
     justify-content: center;
     align-items: flex-start;
     margin-bottom: 0px;
+  }
+  #name,
+  #style,
+  #gym,
+  #contact {
+    width: 300px;
+  }
+  #message {
+    width: 310px;
   }
   .footer-container {
     width: 100dvw;
