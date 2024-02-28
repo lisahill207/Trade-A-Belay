@@ -1,4 +1,5 @@
 import FooterLogo from "./Images/movementFooter.png";
+
 export default function Footer3() {
   return (
     <div className="footer-3">
