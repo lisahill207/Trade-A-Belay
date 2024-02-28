@@ -132,36 +132,36 @@ textarea {
   margin-top: 20px;
 }
 .outer-dots {
-  width: 97dvw;
+  width: 95dvw;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 5px 0px;
   background: radial-gradient(
         var(--dots) 10%,
-        var(--midGrey) 15%,
+        var(--midGrey) 20%,
         var(--midGrey) 80%
       )
       left repeat-y,
-    radial-gradient(var(--dots) 10%, var(--midGrey) 15%, var(--midGrey) 80%)
+    radial-gradient(var(--dots) 10%, var(--midGrey) 20%, var(--midGrey) 80%)
       right repeat-y;
   background-size: 20px 20px;
 }
 .inner-dots {
-  width: 95dvw;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  width: 93dvw;
   background: radial-gradient(
         var(--dots) 10%,
-        var(--midGrey) 15%,
+        var(--midGrey) 20%,
         var(--midGrey) 80%
       )
       left repeat-y,
-    radial-gradient(var(--dots) 10%, var(--midGrey) 15%, var(--midGrey) 80%)
+    radial-gradient(var(--dots) 10%, var(--midGrey) 20%, var(--midGrey) 80%)
       right repeat-y;
   background-size: 20px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .bio {
   display: flex;
@@ -169,8 +169,8 @@ textarea {
   justify-content: center;
   align-items: center;
   width: 400px;
-  border: 2px var(--blueGrey) solid;
   margin: 20px;
+  border: 2px var(--blueGrey) solid;
   background-color: var(--lightBlue);
   color: var(--white);
   font-size: 12pt;
@@ -430,7 +430,7 @@ input[type="file"] {
   .mobileHamburger {
     display: flex;
     align-items: center;
-    margin-right: 40px;
+    margin-right: 30px;
   }
 
   .mobile-menu,
@@ -481,4 +481,30 @@ input[type="file"] {
     translate: 0 calc(4px / 2);
     background-color: var(--white);
   }
+  .outer-dots {
+    width: 95dvw;
+  }
+  .inner-dots {
+    width: 92dvw;
+  }
+}
+@media screen and (max-width: 720px) {
+  .belay-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    background-color: none;
+  }
+  .bios {
+    width: 100dvw;
+    margin-top: 0px;
+  }
+  .outer-dots,
+  .inner-dots {
+    background: none;
+  }
+}
+@media screen and (max-width: 720px) {
 }
