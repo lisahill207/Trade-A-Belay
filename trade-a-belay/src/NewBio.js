@@ -34,7 +34,9 @@ export default function NewBio({
           </div>
         </div>
       </div>
-      <button onClick={() => deleteBio(id)}>Delete Bio</button>
+      <button className="delete-button" onClick={() => deleteBio(id)}>
+        Delete Bio
+      </button>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ImgUpload from "./ImgUpload";
 
 export default function BelayForm({ addBio }) {
   const [nameAnswer, setNameAnswer] = useState("");
@@ -106,6 +105,7 @@ export default function BelayForm({ addBio }) {
                 name="contact"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 tabindex="4"
+                placeholder="XXX-XXX-XXXX"
                 required
                 aria-required="true"
               />
@@ -126,7 +126,19 @@ export default function BelayForm({ addBio }) {
           </div>
         </div>
         <div className="form-bottom">
-          <ImgUpload handlePhoto={handlePhoto} />
+          <div className="button-wrap">
+            <label class="upload-button" htmlFor="input-file">
+              Upload Photo
+            </label>
+            <input
+              onChange={handlePhoto}
+              type="file"
+              accept="image/*"
+              id="input-file"
+              tabIndex="6"
+              required
+            />
+          </div>
           <button className="post-button">Post!</button>
         </div>
       </form>
