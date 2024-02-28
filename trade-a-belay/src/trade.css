@@ -499,12 +499,10 @@ input[type="file"] {
   }
   .bios {
     width: 100dvw;
-    margin-top: 0px;
+    margin: 0px;
   }
   .outer-dots,
   .inner-dots {
     background: none;
   }
-}
-@media screen and (max-width: 720px) {
 }
