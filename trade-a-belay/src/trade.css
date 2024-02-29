@@ -368,6 +368,7 @@ input[type="file"] {
   padding-left: 5px;
 }
 .footer-social {
+  border: solid red;
   align-self: center;
   font-size: 22pt;
   display: flex;
@@ -375,6 +376,7 @@ input[type="file"] {
   width: 150px;
 }
 .footer-2 {
+  border: solid red;
   display: flex;
   justify-content: flex-start;
   color: var(--white);
@@ -383,9 +385,11 @@ input[type="file"] {
 .footer-box-list {
   border-right: 1px solid var(--white);
   padding-right: 10px;
+  border: solid red;
 }
 #footer-box4-list {
   border: none;
+  border: solid red;
 }
 .footer-box-item {
   list-style: none;
@@ -394,13 +398,16 @@ input[type="file"] {
   display: flex;
   justify-content: space-between;
   width: 80dvw;
+  border: solid red;
 }
 .copy {
   color: var(--white);
   align-self: center;
+  border: solid red;
 }
 .logo-vertical img {
   width: 125px;
+  border: solid red;
 }
 @media only screen and (max-width: 1220px) {
   .small-nav {
