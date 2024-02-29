@@ -9,6 +9,7 @@
   --dots: #66666660;
 }
 body {
+  overflow-x: hidden;
   border: solid red;
   font-family: Arial, Helvetica, sans-serif;
   width: 100dvw;
