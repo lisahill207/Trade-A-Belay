@@ -57,7 +57,7 @@ textarea {
   display: flex;
   justify-content: flex-end;
   font-size: 10pt;
-  padding-right: 10px;
+  padding-right: 25px;
 }
 .small-nav-list {
   list-style: none;
