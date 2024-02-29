@@ -291,10 +291,11 @@ form p {
   background-color: var(--lightBlue);
 }
 .form-bottom {
+  border: solid red;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80dvw;
+  width: 50dvw;
 }
 .file-container {
   display: flex;
