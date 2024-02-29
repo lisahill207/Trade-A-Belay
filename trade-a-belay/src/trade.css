@@ -91,7 +91,7 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   width: 268px;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 .large-nav-list {
   grid-column-start: 2;
@@ -117,7 +117,7 @@ textarea {
   justify-content: flex-end;
   align-items: center;
   font-weight: bold;
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .belay-content {
   display: flex;
@@ -129,12 +129,11 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 98dvw;
+  width: 100dvw;
   background-color: var(--midGrey);
-  margin-top: 20px;
 }
 .outer-dots {
-  width: 95dvw;
+  width: 97dvw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +149,7 @@ textarea {
   background-size: 20px 20px;
 }
 .inner-dots {
-  width: 93dvw;
+  width: 95dvw;
   background: radial-gradient(
         var(--dots) 10%,
         var(--midGrey) 20%,
@@ -210,11 +209,10 @@ textarea {
   padding: 2px;
 }
 .form {
-  width: 98dvw;
+  width: 100dvw;
   background-color: var(--darkBlue);
   color: var(--white);
   font-size: 15pt;
-  margin-bottom: 20px;
   padding: 15px 0px;
   display: flex;
   justify-content: center;
