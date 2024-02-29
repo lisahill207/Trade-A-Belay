@@ -103,9 +103,8 @@ export default function BelayForm({ addBio }) {
                 type="tel"
                 id="contact"
                 name="contact"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="[0-9]{3}[0-9]{3}[0-9]{4}"
                 tabindex="4"
-                placeholder="XXX-XXX-XXXX"
                 required
                 aria-required="true"
               />
