@@ -9,6 +9,7 @@
   --dots: #66666660;
 }
 body {
+  border: solid red;
   font-family: Arial, Helvetica, sans-serif;
   width: 100dvw;
   margin: 0;
@@ -119,6 +120,7 @@ textarea {
   margin-right: 15px;
 }
 .belay-content {
+  border: solid red;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -127,6 +129,7 @@ textarea {
   width: 100dvw;
 }
 .bios {
+  border: solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,6 +138,7 @@ textarea {
   margin-top: 20px;
 }
 .outer-dots {
+  border: solid red;
   width: 95dvw;
   display: flex;
   justify-content: center;
@@ -151,6 +155,7 @@ textarea {
   background-size: 20px 20px;
 }
 .inner-dots {
+  border: solid red;
   width: 93dvw;
   background: radial-gradient(
         var(--dots) 10%,
@@ -167,6 +172,7 @@ textarea {
   align-items: center;
 }
 .bio {
+  border: solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -211,6 +217,7 @@ textarea {
   padding: 2px;
 }
 .form {
+  border: solid red;
   width: 98dvw;
   background-color: var(--darkBlue);
   color: var(--white);
@@ -222,6 +229,7 @@ textarea {
   align-items: flex-start;
 }
 form {
+  border: solid red;
   max-width: 1000px;
   display: flex;
   flex-direction: column;
@@ -234,14 +242,17 @@ form p {
   font-size: 20pt;
 }
 .form-top {
+  border: solid red;
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 .form-left {
+  border: solid red;
   padding-right: 10px;
 }
 .form-right {
+  border: solid red;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
@@ -322,6 +333,7 @@ input[type="file"] {
 }
 
 .footer-container {
+  border: solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,6 +342,7 @@ input[type="file"] {
   margin: 0px;
 }
 .footer {
+  border: solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,6 +351,7 @@ input[type="file"] {
   padding: 20px;
 }
 .footer-1 {
+  border: solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
