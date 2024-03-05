@@ -160,6 +160,22 @@ textarea {
       right repeat-y;
   background-size: 20px 20px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.upper {
+  text-align: center;
+  color: var(--darkBlue);
+}
+.upper h2 {
+  font-size: 25pt;
+}
+.upper p {
+  font-size: 15pt;
+}
+.lower {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
