@@ -1,6 +1,7 @@
 import LoginPage from "./pages/auth/login/LoginPage.jsx";
 import SignUpPage from "./pages/auth/signup/SignUpPage.jsx";
 import HomePage from "./pages/home/HomePage.jsx";
+import "./trade.css";
 
 import { Route, Routes } from "react-router-dom";
 
