@@ -1,5 +1,4 @@
 import React from "react";
-
 import NewBio from "./NewBio.jsx";
 import StaticBios from "./StaticBios.jsx";
 
@@ -14,10 +13,6 @@ const BelayBios = ({ deleteBio, bios }) => {
           </div>
           <div className="lower">
             <StaticBios />
-            {bios.length === 0 && ""}
-            {bios.map((bio) => {
-              return <NewBio {...bio} key={bio.id} deleteBio={deleteBio} />;
-            })}
           </div>
         </div>
       </div>

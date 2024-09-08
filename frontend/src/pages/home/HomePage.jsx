@@ -1,12 +1,16 @@
 import React from "react";
 import NavBar from "../../components/navbar/NavBar.jsx";
-import Body from "../../components/body/Body.jsx";
+import Bios from "../../components/bios/Bios.jsx";
+import Footer from "../../components/footer/Footer.jsx";
+import Login from "../../components/bottom/Login.jsx";
 
 const HomePage = () => {
   return (
     <div>
       <NavBar />
-      <Body />
+      <Bios />
+      <Login />
+      <Footer />
     </div>
   );
 };

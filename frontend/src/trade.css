@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --darkBlue: #001f5b;
   --lightBlue: #009ca6;
@@ -17,107 +21,16 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.navbar {
-  width: 100dvw;
-  display: flex;
-  flex-direction: column;
-}
-.mobileHeader {
-  display: none;
-}
 button,
 input,
 select,
 textarea {
   cursor: pointer;
 }
-.fa-angles-down,
-.fa-location-dot,
 .fa-meta,
 .fa-instagram,
 .fa-youtube {
   color: var(--yellow);
-}
-.fa-house {
-  color: var(--white);
-}
-.nav-ad {
-  background-color: var(--darkBlue);
-  text-align: center;
-  color: var(--white);
-  font-size: 13pt;
-  margin: 0px;
-  padding: 10px 0px;
-}
-.ad-more {
-  color: var(--yellow);
-  display: inline;
-  margin-left: 15px;
-}
-.small-nav {
-  background-color: var(--grey);
-  display: flex;
-  justify-content: flex-end;
-  font-size: 10pt;
-  padding-right: 25px;
-}
-.small-nav-list {
-  list-style: none;
-  font-weight: bold;
-}
-.small-nav-item {
-  display: inline;
-  padding: 10px;
-}
-.white {
-  color: var(--white);
-}
-.yellow {
-  color: var(--yellow);
-}
-.large-nav {
-  background-color: var(--darkBlue);
-  display: grid;
-  color: var(--white);
-  padding: 30px 0px;
-}
-.logo-nav {
-  grid-column-start: 1;
-  grid-column-end: 2;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  background-image: url("Images/movement.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 268px;
-  margin-left: 20px;
-}
-.large-nav-list {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.large-nav-item {
-  display: inline;
-  list-style: none;
-  padding: 10px;
-  font-weight: bold;
-}
-.fa-location-dot {
-  padding-right: 5px;
-}
-.large-nav-location {
-  grid-column-start: 3;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-weight: bold;
-  margin-right: 20px;
 }
 .belay-content {
   display: flex;
@@ -403,100 +316,94 @@ input[type="file"] {
 .logo-vertical img {
   width: 125px;
 }
-@media only screen and (max-width: 1220px) {
-  .small-nav {
-    display: none;
-  }
-  .large-nav {
-    display: none;
-  }
-  .mobileHeader {
-    background-color: var(--darkBlue);
-    color: var(--white);
-    width: 100dvw;
-    height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .mobileHeaderLeft {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    max-width: 30dvw;
-  }
 
-  .movementMobileLogo {
-    width: 200px;
-    padding: 20px;
-  }
-  .mobileHeaderRight {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 70dvw;
-  }
-  .mobileHamburger {
-    display: flex;
-    align-items: center;
-    padding-right: 30px;
-  }
-
-  .mobile-menu,
-  .mobile-menu::before,
-  .mobile-menu::after {
-    box-sizing: border-box;
-  }
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    width: max-content;
-    cursor: pointer;
-  }
-  .hamburger-menu::before,
-  .hamburger-menu::after,
-  .hamburger-menu input {
-    content: "";
-    width: 50px;
-    height: 6px;
-    background-color: var(--white);
-    border-radius: 9999px;
-    transform-origin: left center;
-    transition: opacity 200ms ease-in-out, width 200ms ease-in-out,
-      rotate 200ms ease-in-out, translate 200ms ease-in-out,
-      background-color 200ms ease-in-out;
-  }
-  .hamburger-menu input {
-    appearance: none;
-    padding: 0px;
-    margin: 0px;
-    outline: none;
-    pointer-events: none;
-  }
-  .hamburger-menu input:checked {
-    opacity: 0%;
-    width: 0;
-  }
-  .hamburger-menu:has(input:checked)::before {
-    rotate: 45deg;
-    width: calc(calc(5px * 3 + 5px * 2) * 1.41421356);
-    translate: 0 calc(4px / -2);
-    background-color: var(--white);
-  }
-  .hamburger-menu:has(input:checked)::after {
-    rotate: -45deg;
-    width: calc(calc(5px * 3 + 5px * 2) * 1.41421356);
-    translate: 0 calc(4px / 2);
-    background-color: var(--white);
-  }
-  .outer-dots {
-    width: 95dvw;
-  }
-  .inner-dots {
-    width: 92dvw;
-  }
+.mobileHeader {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  width: 100dvw;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+.mobileHeaderLeft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 30dvw;
+}
+
+.movementMobileLogo {
+  width: 200px;
+  padding: 20px;
+}
+.mobileHeaderRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 70dvw;
+}
+.mobileHamburger {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.mobile-menu,
+.mobile-menu::before,
+.mobile-menu::after {
+  box-sizing: border-box;
+}
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: max-content;
+  cursor: pointer;
+}
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  content: "";
+  width: 50px;
+  height: 6px;
+  background-color: var(--white);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity 200ms ease-in-out, width 200ms ease-in-out,
+    rotate 200ms ease-in-out, translate 200ms ease-in-out,
+    background-color 200ms ease-in-out;
+}
+.hamburger-menu input {
+  appearance: none;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  pointer-events: none;
+}
+.hamburger-menu input:checked {
+  opacity: 0%;
+  width: 0;
+}
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
+  width: calc(calc(5px * 3 + 5px * 2) * 1.41421356);
+  translate: 0 calc(4px / -2);
+  background-color: var(--white);
+}
+.hamburger-menu:has(input:checked)::after {
+  rotate: -45deg;
+  width: calc(calc(5px * 3 + 5px * 2) * 1.41421356);
+  translate: 0 calc(4px / 2);
+  background-color: var(--white);
+}
+.outer-dots {
+  width: 95dvw;
+}
+.inner-dots {
+  width: 92dvw;
+}
+
 @media screen and (max-width: 900px) {
   .form-top {
     display: flex;

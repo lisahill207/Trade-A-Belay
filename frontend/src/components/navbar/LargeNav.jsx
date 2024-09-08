@@ -2,28 +2,36 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import movement from "../../images/movement.png";
 
 const LargeNav = () => {
   return (
-    <div className="large-nav">
-      <div className="logo-nav"></div>
-      <ul className="large-nav-list">
-        <li className="large-nav-item">WHY US</li>
-        <li className="large-nav-item">FIRST VISIT</li>
-        <li className="large-nav-item">|</li>
-        <li className="large-nav-item">
-          GYM <FontAwesomeIcon icon={faHouse} />
-        </li>
-        <li className="large-nav-item">CALENDAR</li>
-        <li className="large-nav-item">CLIMBING</li>
-        <li className="large-nav-item">YOGA</li>
-        <li className="large-nav-item">FITNESS</li>
-      </ul>
-      <div className="large-nav-location">
-        <FontAwesomeIcon icon={faLocationDot} />
-        TIMONIUM
+    <>
+      <div className="md:hidden sm:hidden lg:hidden bg-blue-950 w-dvw flex justify-between text-white px-3 py-6">
+        <div className="bg-cover bg-center flex justify-center content-center">
+          <img src={movement} />
+        </div>
+        <ul className="content-center">
+          <li className="inline list-none p-2.5 font-bold">WHY US</li>
+          <li className="inline list-none p-2.5 font-bold">FIRST VISIT</li>
+          <li className="inline list-none p-2.5 font-bold">|</li>
+          <li className="inline list-none p-2.5 font-bold">
+            GYM <FontAwesomeIcon icon={faHouse} className="text-white" />
+          </li>
+          <li className="inline list-none p-2.5 font-bold">CALENDAR</li>
+          <li className="inline list-none p-2.5 font-bold">CLIMBING</li>
+          <li className="inline list-none p-2.5 font-bold">YOGA</li>
+          <li className="inline list-none p-2.5 font-bold">FITNESS</li>
+        </ul>
+        <div className="flex justify-end items-center font-bold mr-5">
+          <FontAwesomeIcon
+            icon={faLocationDot}
+            className="pr-1 text-yellow-300"
+          />
+          TIMONIUM
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

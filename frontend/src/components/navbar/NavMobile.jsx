@@ -3,8 +3,8 @@ import movementLogo from "../../images/movement.png";
 
 const NavMobile = () => {
   return (
-    <div className="mobileHeader">
-      <div className="mobileHeaderLeft">
+    <div className="xl:hidden">
+      <div className=" mobileHeaderLeft">
         <div className="mobileLogo">
           <img
             src={movementLogo}

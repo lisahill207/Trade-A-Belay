@@ -6,7 +6,7 @@ import NavMobile from "./NavMobile.jsx";
 
 const NavBar = () => {
   return (
-    <nav className="navbar">
+    <nav className="w-dvw flex-col">
       <NavAd />
       <SmallNav />
       <LargeNav />
