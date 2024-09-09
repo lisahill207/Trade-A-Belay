@@ -7,79 +7,61 @@ import Bio3 from "../../images/belay_bio3.jpg";
 const StaticBios = () => {
   return (
     <>
-      <div className="bio">
-        <img
-          src={Bio1}
-          className="bio-img"
-          alt="Lisa standing in front of a steep rocky hill in Portugal."
-        />
-        <div className="bio-content">
-          <div className="bio-left">
-            <div className="bio-name">
-              <div className="bio-answer">Lisa</div>
-              <div className="name-line"> </div>
-            </div>
-            <div className="bio-answer">Top Rope</div>
-            <div className="bio-answer">Timonium</div>
-            <div className="bio-answer">123-456-7890</div>
-          </div>
-          <div className="bio-right">
-            <div className="bio-answer">
-              I'm looking for a climbing partner for Tuesday and/or Thursday
-              evenings. I'm available between 6-10pm. Lead climbing certified
-              but priority is Top Rope. Call or text!
-            </div>
-          </div>
+      <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
+        <figure className="w-96 h-400">
+          <img
+            className="object-cover"
+            src={Bio1}
+            alt="Lisa standing in front of a steep rocky hill in Portugal."
+          />
+        </figure>
+        <div className="card-body text-wrap">
+          <h2 className="card-title">Lisa</h2>
+          <h3>Top Rope, Timonium</h3>
+          <h3>123-456-7890</h3>
+          <p>
+            I'm looking for a climbing partner for Tuesday and/or Thursday
+            evenings. I'm available between 6-10pm. Lead climbing certified but
+            priority is Top Rope. Call or text!
+          </p>
         </div>
       </div>
-      <div className="bio">
-        <img
-          src={Bio2}
-          className="bio-img"
-          alt="Female crouching in the mouth of a cave."
-        />
-        <div className="bio-content">
-          <div className="bio-left">
-            <div className="bio-name">
-              <div className="bio-answer">Kelly</div>
-              <div className="name-line"> </div>
-            </div>
-            <div className="bio-answer">Boulder</div>
-            <div className="bio-answer">Hampden</div>
-            <div className="bio-answer">234-567-8901</div>
-          </div>
-          <div className="bio-right">
-            <div className="bio-answer">
-              I boulder at Hampden before work Monday, Wednesday, and Friday.
-              Always looking for more people to join for an early morning sweat
-              sesh!
-            </div>
-          </div>
+      <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
+        <figure className="w-96 h-400">
+          <img
+            className="object-cover"
+            src={Bio2}
+            alt="Female crouching in the mouth of a cave."
+          />
+        </figure>
+        <div className="card-body text-wrap">
+          <h2 className="card-title">Kelly</h2>
+          <h3>Boulder, Hampden</h3>
+          <h3>234-567-8901</h3>
+          <p>
+            I boulder at Hampden before work Monday, Wednesday, and Friday.
+            Always looking for more people to join for an early morning sweat
+            sesh!
+          </p>
         </div>
       </div>
-      <div className="bio">
-        <img
-          src={Bio3}
-          className="bio-img"
-          alt="Female with red hair wearing a backpacking pack and carrying trekking poles."
-        />
-        <div className="bio-content">
-          <div className="bio-left">
-            <div className="bio-name">
-              <div className="bio-answer">Julie</div>
-              <div className="name-line"> </div>
-            </div>
-            <div className="bio-answer">Top Rope</div>
-            <div className="bio-answer">Hampden</div>
-            <div className="bio-answer">345-678-9012</div>
-          </div>
-          <div className="bio-right">
-            <div className="bio-message">
-              I mostly climb on the weekends at Columbia or Crystal City. Have a
-              group of females and we're always open to newcomers! Text me for
-              our next climbing time!
-            </div>
-          </div>
+      <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
+        <figure className="w-96 h-400">
+          <img
+            className="object-cover"
+            src={Bio3}
+            alt="Julie wearing a backpacking pack and carrying trekking poles."
+          />
+        </figure>
+        <div className="card-body text-wrap">
+          <h2 className="card-title">Julie</h2>
+          <h3>Top Rope, Columbia</h3>
+          <h3>345-678-9012</h3>
+          <p>
+            I mostly climb on the weekends at Columbia or Crystal City. Have a
+            group of females and we're always open to newcomers! Text me for our
+            next climbing time!
+          </p>
         </div>
       </div>
     </>

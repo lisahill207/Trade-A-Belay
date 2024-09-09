@@ -42,6 +42,7 @@ export default {
       "dot-color": "#66666660",
     },
     width: { content: "max-content", 97: "97dvw" },
+    height: { 400: "400px" },
     extend: {},
   },
   plugins: [daisyui, require("tailwindcss-bg-patterns")],
