@@ -7,7 +7,7 @@ import movement from "../../images/movement.png";
 const LargeNav = () => {
   return (
     <>
-      <div className="md:hidden sm:hidden lg:hidden bg-blue-950 w-dvw flex justify-between text-white px-3 py-6">
+      <div className="md:hidden sm:hidden lg:hidden bg-dark-blue w-dvw flex justify-between text-white px-3 py-6">
         <div className="bg-cover bg-center flex justify-center content-center">
           <img src={movement} />
         </div>
@@ -24,10 +24,7 @@ const LargeNav = () => {
           <li className="inline list-none p-2.5 font-bold">FITNESS</li>
         </ul>
         <div className="flex justify-end items-center font-bold mr-5">
-          <FontAwesomeIcon
-            icon={faLocationDot}
-            className="pr-1 text-yellow-300"
-          />
+          <FontAwesomeIcon icon={faLocationDot} className="pr-1 text-yellow" />
           TIMONIUM
         </div>
       </div>

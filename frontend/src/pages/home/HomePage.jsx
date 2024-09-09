@@ -1,14 +1,14 @@
 import React from "react";
 import NavBar from "../../components/navbar/NavBar.jsx";
-import Bios from "../../components/bios/Bios.jsx";
+import Body from "../../components/body/Body.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 import Login from "../../components/bottom/Login.jsx";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="font-sans w-dvw m-0 p-0 font-normal">
       <NavBar />
-      <Bios />
+      <Body />
       <Login />
       <Footer />
     </div>
