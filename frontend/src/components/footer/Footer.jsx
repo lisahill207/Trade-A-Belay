@@ -6,8 +6,8 @@ import Footer3 from "./Footer3.jsx";
 
 const Footer = () => {
   return (
-    <footer className="footer-container">
-      <div className="footer">
+    <footer className=" bg-grey flex justify-center align-center">
+      <div className="flex flex-col justify-center align-center w-90dvw">
         <Footer1 />
         <Footer2 />
         <Footer3 />

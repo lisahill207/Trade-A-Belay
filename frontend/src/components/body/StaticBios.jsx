@@ -18,8 +18,8 @@ const StaticBios = () => {
         <div className="card-body text-wrap">
           <h2 className="card-title">Lisa</h2>
           <h3>Top Rope, Timonium</h3>
-          <h3>123-456-7890</h3>
-          <p>
+          <h3 className="blur">123-456-7890</h3>
+          <p className="blur">
             I'm looking for a climbing partner for Tuesday and/or Thursday
             evenings. I'm available between 6-10pm. Lead climbing certified but
             priority is Top Rope. Call or text!
@@ -37,8 +37,8 @@ const StaticBios = () => {
         <div className="card-body text-wrap">
           <h2 className="card-title">Kelly</h2>
           <h3>Boulder, Hampden</h3>
-          <h3>234-567-8901</h3>
-          <p>
+          <h3 className="blur">234-567-8901</h3>
+          <p className="blur">
             I boulder at Hampden before work Monday, Wednesday, and Friday.
             Always looking for more people to join for an early morning sweat
             sesh!
@@ -56,8 +56,8 @@ const StaticBios = () => {
         <div className="card-body text-wrap">
           <h2 className="card-title">Julie</h2>
           <h3>Top Rope, Columbia</h3>
-          <h3>345-678-9012</h3>
-          <p>
+          <h3 className="blur">345-678-9012</h3>
+          <p className="blur">
             I mostly climb on the weekends at Columbia or Crystal City. Have a
             group of females and we're always open to newcomers! Text me for our
             next climbing time!

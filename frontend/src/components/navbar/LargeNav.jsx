@@ -9,7 +9,10 @@ const LargeNav = () => {
     <>
       <div className="md:hidden sm:hidden lg:hidden bg-dark-blue w-dvw flex justify-between text-white px-3 py-6">
         <div className="bg-cover bg-center flex justify-center content-center">
-          <img src={movement} />
+          <a href={"/"}>
+            {" "}
+            <img src={movement} />
+          </a>
         </div>
         <ul className="content-center">
           <li className="inline list-none p-2.5 font-bold">WHY US</li>

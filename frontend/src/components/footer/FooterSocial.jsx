@@ -6,10 +6,10 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const FooterSocial = () => {
   return (
-    <div className="footer-social">
-      <FontAwesomeIcon icon={faMeta} />
-      <FontAwesomeIcon icon={faInstagram} />
-      <FontAwesomeIcon icon={faYoutube} />
+    <div className="self-center text-3xl flex flex-row text-yellow">
+      <FontAwesomeIcon icon={faMeta} className="p-2" />
+      <FontAwesomeIcon icon={faInstagram} className="p-2" />
+      <FontAwesomeIcon icon={faYoutube} className="p-2" />
     </div>
   );
 };

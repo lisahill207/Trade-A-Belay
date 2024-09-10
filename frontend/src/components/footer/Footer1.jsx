@@ -4,7 +4,7 @@ import FooterSocial from "./FooterSocial.jsx";
 
 const Footer1 = () => {
   return (
-    <div className="footer-1">
+    <div className="flex flex-row justify-around items-center m-3 w-95dvw">
       <FooterNewsletter />
       <FooterSocial />
     </div>

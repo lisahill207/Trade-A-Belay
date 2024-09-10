@@ -5,10 +5,10 @@ import React from "react";
 
 const FooterNewsletter = () => {
   return (
-    <div className="footer-newsletter">
-      <p className="footer-newsletter-text">
+    <div className="">
+      <p className="bg-yellow text-dark-blue py-3.5 px-3.5 self-center text-xl">
         SIGN UP FOR OUR NEWSLETTER
-        <FontAwesomeIcon icon={faArrowRight} />
+        <FontAwesomeIcon icon={faArrowRight} className="pl-1" />
       </p>
     </div>
   );
