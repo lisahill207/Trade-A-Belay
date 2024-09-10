@@ -7,7 +7,11 @@ const Login = () => {
         <h2 className="self-center py-2 text-2xl">Login to view profiles</h2>
 
         <p className="self-center py-2">
-          New to our community? <a href={`/signup`}>Sign up here!</a>
+          New to our community?{" "}
+          <a href={`/signup`} className="underline">
+            Sign up
+          </a>{" "}
+          here!
         </p>
 
         <label className="max-w-60 m-4 self-center input input-bordered flex items-center gap-2">

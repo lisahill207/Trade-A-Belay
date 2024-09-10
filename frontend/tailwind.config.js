@@ -40,6 +40,7 @@ export default {
       "blue-grey": "#abb8c3",
       "mid-grey": "#c1c6c8",
       "dot-color": "#66666660",
+      red: "#ff0f0f",
     },
     width: { content: "max-content", 97: "97dvw", "95dvw": "95dvw" },
     height: { 400: "400px" },
