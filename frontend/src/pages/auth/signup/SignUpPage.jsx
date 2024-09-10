@@ -5,7 +5,7 @@ import Footer from "../../../components/footer/Footer.jsx";
 
 const SignUpPage = () => {
   return (
-    <div className="font-sans w-dvw m-0 p-0 font-normal">
+    <div className="flex flex-col font-sans w-dvw m-0 p-0 font-normal">
       <NavBar />
       <Signup />
       <Footer />

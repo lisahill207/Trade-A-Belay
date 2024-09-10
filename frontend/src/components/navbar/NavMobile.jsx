@@ -5,7 +5,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavMobile = () => {
   return (
-    <div className="xl:hidden bg-blue-950 text-white w-dvw h-21 flex justify-between items-center">
+    <div className="xl:hidden bg-dark-blue text-white w-dvw h-21 flex justify-between items-center">
       <div className="flex justify-start items-center w-1/3">
         <div>
           <img

@@ -3,7 +3,7 @@ import React from "react";
 const Login = () => {
   return (
     <>
-      <div className=" login-form text-white flex flex-col justify-center content-center w-dvw p-4">
+      <div className="grow login-form text-white flex flex-col justify-center content-center w-dvw p-4">
         <h2 className="self-center py-2 text-2xl">Login to view profiles</h2>
 
         <p className="self-center py-2">

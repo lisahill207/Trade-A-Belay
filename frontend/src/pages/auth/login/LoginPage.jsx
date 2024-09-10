@@ -5,7 +5,7 @@ import Footer from "../../../components/footer/Footer";
 
 const LoginPage = () => {
   return (
-    <div>
+    <div className="flex flex-col min-h-dvh">
       <NavBar />
       <Login />
       <Footer />

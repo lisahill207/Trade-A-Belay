@@ -7,7 +7,7 @@ import Footer3 from "./Footer3.jsx";
 const Footer = () => {
   return (
     <footer className=" bg-grey flex justify-center align-center">
-      <div className="flex flex-col justify-center align-center w-90dvw">
+      <div className="flex flex-col justify-center align-center w-90dvw md:w-dvw p-2.5">
         <Footer1 />
         <Footer2 />
         <Footer3 />
