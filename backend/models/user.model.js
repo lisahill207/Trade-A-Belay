@@ -25,6 +25,14 @@ const userSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    gym: {
+      type: String,
+      default: "",
+    },
+    style: {
+      type: String,
+      default: "",
+    },
     bio: {
       type: String,
       default: "",

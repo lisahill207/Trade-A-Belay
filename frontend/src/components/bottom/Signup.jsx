@@ -1,26 +1,73 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
+    fullName: "",
+    username: "",
     email: "",
-    firstName: "",
     password: "",
     gym: "",
-    phoneNumber: "",
+    style: "",
     bio: "",
+  });
+
+  const queryClient = useQueryClient();
+
+  const { mutate, isError, isPending, error } = useMutation({
+    mutationFn: async ({
+      fullName,
+      username,
+      email,
+      password,
+      gym,
+      style,
+      bio,
+    }) => {
+      try {
+        const res = await fetch("/api/auth/signup", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fullName,
+            username,
+            email,
+            password,
+            gym,
+            style,
+            bio,
+          }),
+        });
+
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || "Failed to create account");
+        console.log(data);
+        return data;
+      } catch (error) {
+        console.error(error);
+        throw error;
+      }
+    },
+    onSuccess: () => {
+      toast.success("Account created successfully");
+
+      queryClient.invalidateQueries({ queryKey: ["authUser"] });
+    },
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    mutate(formData);
   };
 
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const isError = false;
   return (
     <>
       <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4">
@@ -72,10 +119,10 @@ const Signup = () => {
                 <input
                   type="text"
                   className="grow"
-                  placeholder="First Name"
-                  name="firstName"
+                  placeholder="Username"
+                  name="username"
                   onChange={handleInputChange}
-                  value={formData.firstName}
+                  value={formData.username}
                 />
               </label>
               <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
@@ -100,24 +147,6 @@ const Signup = () => {
                   value={formData.password}
                 />
               </label>
-            </div>
-            <div className="flex flex-col justify-center align-start">
-              <div className="label">
-                <span className="label-text">Choose a Gym</span>
-              </div>
-              <select
-                className="select text-base mb-4 mx-4 select-bordered flex items-center gap-2"
-                onChange={handleInputChange}
-                value={formData.gym}
-                name="gym"
-              >
-                <option value="Timonium">Timonium</option>
-                <option value="Hampden">Hampden</option>
-                <option value="Columbia">Columbia</option>
-                <option value="Rockville">Rockville</option>
-                <option value="5">Crystal City</option>
-                <option value="6">Fairfax</option>
-              </select>
               <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -129,14 +158,55 @@ const Signup = () => {
                   <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
                 </svg>
                 <input
-                  type="tel"
+                  type="text"
                   className="grow"
-                  placeholder="Phone Number"
+                  placeholder="Full Name"
+                  name="fullName"
                   onChange={handleInputChange}
-                  value={formData.phoneNumber}
-                  name="phoneNumber"
+                  value={formData.fullName}
                 />
               </label>
+            </div>
+            <div className="flex flex-col justify-center align-start">
+              <div className="label">
+                <span className="label-text">
+                  Choose a preferred climbing style
+                </span>
+              </div>
+              <select
+                className="select text-base mb-2 mx-4 select-bordered flex items-center gap-2"
+                onChange={handleInputChange}
+                value={formData.style}
+                name="style"
+                defaultValue="Choose a Climbing Style"
+              >
+                <option hidden value="Choose a Climbing Style">
+                  Choose a Climbing Style
+                </option>
+                <option value="Top Rope">Top Rope</option>
+                <option value="Lead">Lead</option>
+                <option value="Boulder">Boulder</option>
+              </select>
+              <div className="label">
+                <span className="label-text">Choose a Gym</span>
+              </div>
+              <select
+                className="select text-base mb-4 mx-4 select-bordered flex items-center gap-2"
+                onChange={handleInputChange}
+                value={formData.gym}
+                name="gym"
+                defaultValue="Choose a Gym"
+              >
+                <option hidden value="Choose a Gym">
+                  Choose a Gym
+                </option>
+                <option value="Timonium">Timonium</option>
+                <option value="Hampden">Hampden</option>
+                <option value="Columbia">Columbia</option>
+                <option value="Rockville">Rockville</option>
+                <option value="Crystal City">Crystal City</option>
+                <option value="Fairfax">Fairfax</option>
+              </select>
               <textarea
                 className="textarea textarea-bordered text-base mx-4 self-center grow"
                 placeholder="Bio"
@@ -147,9 +217,9 @@ const Signup = () => {
             </div>
           </div>
           <button className="justify-self-end btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey">
-            Sign Up
+            {isPending ? "Loading..." : "Sign Up"}
           </button>
-          {isError && <p className="text-red">Something went wrong</p>}
+          {isError && <p className="text-red-500">{error.message}</p>}
         </form>
       </div>
     </>

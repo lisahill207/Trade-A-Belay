@@ -9,16 +9,11 @@ const StaticBios = () => {
     <>
       <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
         <figure className="w-96 h-400">
-          <img
-            className="object-cover"
-            src={Bio1}
-            alt="Lisa standing in front of a steep rocky hill in Portugal."
-          />
+          <img className="object-cover" src={Bio1} alt="Profile image" />
         </figure>
         <div className="card-body text-wrap">
           <h2 className="card-title">Lisa</h2>
           <h3>Top Rope, Timonium</h3>
-          <h3 className="blur">123-456-7890</h3>
           <p className="blur">
             I'm looking for a climbing partner for Tuesday and/or Thursday
             evenings. I'm available between 6-10pm. Lead climbing certified but
@@ -28,16 +23,11 @@ const StaticBios = () => {
       </div>
       <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
         <figure className="w-96 h-400">
-          <img
-            className="object-cover"
-            src={Bio2}
-            alt="Female crouching in the mouth of a cave."
-          />
+          <img className="object-cover" src={Bio2} alt="Profile image" />
         </figure>
         <div className="card-body text-wrap">
           <h2 className="card-title">Kelly</h2>
           <h3>Boulder, Hampden</h3>
-          <h3 className="blur">234-567-8901</h3>
           <p className="blur">
             I boulder at Hampden before work Monday, Wednesday, and Friday.
             Always looking for more people to join for an early morning sweat
@@ -47,16 +37,11 @@ const StaticBios = () => {
       </div>
       <div className="card m-2 bg-dark-blue max-w-96 shadow-xl">
         <figure className="w-96 h-400">
-          <img
-            className="object-cover"
-            src={Bio3}
-            alt="Julie wearing a backpacking pack and carrying trekking poles."
-          />
+          <img className="object-cover" src={Bio3} alt="Profile image" />
         </figure>
         <div className="card-body text-wrap">
           <h2 className="card-title">Julie</h2>
           <h3>Top Rope, Columbia</h3>
-          <h3 className="blur">345-678-9012</h3>
           <p className="blur">
             I mostly climb on the weekends at Columbia or Crystal City. Have a
             group of females and we're always open to newcomers! Text me for our

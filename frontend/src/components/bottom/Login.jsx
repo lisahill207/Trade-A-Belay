@@ -1,21 +1,56 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: "",
+    username: "",
     password: "",
+  });
+  const queryClient = useQueryClient();
+
+  const {
+    mutate: loginMutation,
+    isPending,
+    isError,
+    error,
+  } = useMutation({
+    mutationFn: async ({ username, password }) => {
+      try {
+        const res = await fetch("/api/auth/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ username, password }),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data.error || "Something went wrong");
+        }
+      } catch (error) {
+        throw new Error(error);
+      }
+    },
+    onSuccess: () => {
+      toast.success("Login successful");
+      queryClient.invalidateQueries({ queryKey: ["authUser"] });
+    },
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    loginMutation(formData);
   };
+
   const handleInputChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const isError = false;
   return (
     <>
       <div className="grow login-form  flex flex-col justify-center align-center w-dvw p-4">
@@ -25,11 +60,12 @@ const Login = () => {
 
         <p className="self-center py-2 text-white">
           New to our community?{" "}
-          <Link to="/login" className="underline font-bold">
+          <Link to="/signup" className="underline font-bold">
             Sign Up
           </Link>{" "}
           here!
         </p>
+        {isError && <p className="text-red text-center">{error.message}</p>}
         <form
           className="flex flex-col justify-center align-center"
           onSubmit={handleSubmit}
@@ -48,10 +84,10 @@ const Login = () => {
               <input
                 type="text"
                 className="grow"
-                placeholder="Email"
-                name="email"
+                placeholder="Username"
+                name="username"
                 onChange={handleInputChange}
-                value={formData.email}
+                value={formData.username}
               />
             </label>
             <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
@@ -78,11 +114,8 @@ const Login = () => {
             </label>
           </div>
           <button className="w-content self-center btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey">
-            Log In
+            {isPending ? "Loading..." : "Login"}
           </button>
-          {isError && (
-            <p className="text-red self-center">Something went wrong</p>
-          )}
         </form>
       </div>
     </>
