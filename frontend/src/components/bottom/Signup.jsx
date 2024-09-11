@@ -20,26 +20,25 @@ const Signup = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const isError = true;
+  const isError = false;
   return (
     <>
       <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4">
-        <h2 className="self-center py-2 text-2xl text-wrap text-center">
+        <h2 className="self-center py-2 text-2xl text-wrap text-center text-white">
           Sign Up to find your next climbing partner
         </h2>
-        <p className="self-center py-2 text-lg ">
+        <p className="self-center py-2 text-lg text-white">
           Already a member?{" "}
-          <Link to="/login">
-            <button className="justify-self-end btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey :hover:text-">
-              Log In
-            </button>
+          <Link to="/login" className="underline font-bold">
+            Log In
           </Link>
         </p>
         <form
           className="flex flex-col justify-center items-center"
           onSubmit={handleSubmit}
+          f
         >
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex max-w-lg mx-auto flex-row justify-center items-center text-white">
             <div className="flex flex-col justify-center align-start">
               <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
@@ -147,7 +146,7 @@ const Signup = () => {
               ></textarea>
             </div>
           </div>
-          <button className="justify-self-end btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey :hover:text-">
+          <button className="justify-self-end btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey">
             Sign Up
           </button>
           {isError && <p className="text-red">Something went wrong</p>}
