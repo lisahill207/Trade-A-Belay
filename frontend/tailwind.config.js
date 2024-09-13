@@ -42,6 +42,7 @@ export default {
       "mid-grey": "#c1c6c8",
       "dot-color": "#66666660",
       red: "#ff0f0f",
+      teal: "#33A7B5",
     },
     width: { content: "max-content", 97: "97dvw", "95dvw": "95dvw" },
     height: { 400: "400px" },

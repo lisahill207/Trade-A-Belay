@@ -178,13 +178,12 @@ const Signup = () => {
                 onChange={handleInputChange}
                 value={formData.style}
                 name="style"
-                defaultValue="Choose a Climbing Style"
               >
                 <option hidden value="Choose a Climbing Style">
                   Choose a Climbing Style
                 </option>
                 <option value="Top Rope">Top Rope</option>
-                <option value="Lead">Lead</option>
+                <option value="Lead Rope">Lead Rope</option>
                 <option value="Boulder">Boulder</option>
               </select>
               <div className="label">
@@ -195,7 +194,6 @@ const Signup = () => {
                 onChange={handleInputChange}
                 value={formData.gym}
                 name="gym"
-                defaultValue="Choose a Gym"
               >
                 <option hidden value="Choose a Gym">
                   Choose a Gym

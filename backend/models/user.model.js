@@ -27,14 +27,17 @@ const userSchema = new mongoose.Schema(
     },
     gym: {
       type: String,
+      required: true,
       default: "",
     },
     style: {
       type: String,
+      required: true,
       default: "",
     },
     bio: {
       type: String,
+      required: true,
       default: "",
     },
   },

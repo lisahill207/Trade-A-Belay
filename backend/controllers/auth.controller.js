@@ -4,7 +4,8 @@ import { generateTokenAndSetCookie } from "../lib/utils/generateToken.js";
 
 export const signup = async (req, res) => {
   try {
-    const { fullName, username, email, password, gym, style, bio } = req.body;
+    const { fullName, username, email, password, gym, style, bio, profileImg } =
+      req.body;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -38,6 +39,7 @@ export const signup = async (req, res) => {
       gym,
       style,
       bio,
+      profileImg,
     });
 
     if (newUser) {
@@ -53,6 +55,7 @@ export const signup = async (req, res) => {
         gym: newUser.gym,
         style: newUser.style,
         bio: newUser.bio,
+        profileImg: newUser.profileImg,
       });
     } else {
       res.status(400).json({ error: "Invalid user data" });

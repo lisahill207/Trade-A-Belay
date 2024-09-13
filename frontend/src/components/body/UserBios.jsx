@@ -1,6 +1,6 @@
 import React from "react";
 import UserBio from "./UserBio.jsx";
-import StaticBios from "./StaticBios.jsx";
+import AllBios from "./AllBios.jsx";
 import UpdateProfile from "./UpdateProfile.jsx";
 
 const UserBios = () => {
@@ -18,8 +18,8 @@ const UserBios = () => {
           <UserBio />
           <UpdateProfile />
         </div>
-        <div className="flex flex-wrap justify-around items-center">
-          <StaticBios />
+        <div>
+          <AllBios />
         </div>
       </div>
     </div>
