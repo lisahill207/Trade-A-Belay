@@ -1,7 +1,34 @@
 import { React, useEffect, useState, useRef } from "react";
 import useUpdateUserProfile from "../../hooks/useUpdateUserProfile.jsx";
+import axios from "axios";
 
 const UpdateProfile = ({ authUser }) => {
+  const url = `/api/users/update`;
+  const [postImage, setPostImage] = useState({ profileImg: "" });
+
+  const createPost = async (newImage) => {
+    try {
+      await axios.post(url, newImage);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleImgSubmit = (e) => {
+    e.preventDefault();
+    createPost(postImage);
+    console.log("Uploaded");
+  };
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+    const base64 = await convertToBase64(file);
+    console.log(base64);
+    setPostImage({ ...postImage, profileImg: base64 });
+  };
+
+  const profileImgRef = useRef(null);
+
   const [formData, setFormData] = useState({
     fullName: "",
     username: "",
@@ -11,6 +38,7 @@ const UpdateProfile = ({ authUser }) => {
     gym: "",
     style: "",
     bio: "",
+    profileImg: "",
   });
   const { updateProfile, isUpdatingProfile } = useUpdateUserProfile();
 
@@ -177,8 +205,37 @@ const UpdateProfile = ({ authUser }) => {
           {isUpdatingProfile ? "Updating..." : "Update"}
         </button>
       </form>
+      <form onSubmit={handleImgSubmit}>
+        <div
+          onClick={() => profileImgRef.current.click()}
+          className="btn bg-dark-blue hover:bg-grey text-white text-lg font-bold"
+        >
+          Upload a Profile Photo
+        </div>
+        <button className="btn">Upload photo</button>
+        <input
+          type="file"
+          hidden
+          accept="image/*"
+          ref={profileImgRef}
+          onChange={(e) => handleFileUpload(e)}
+        />
+      </form>
     </div>
   );
 };
 
 export default UpdateProfile;
+
+function convertToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(file);
+    fileReader.onload = () => {
+      resolve(fileReader.result);
+    };
+    fileReader.onerror = (error) => {
+      reject(error);
+    };
+  });
+}

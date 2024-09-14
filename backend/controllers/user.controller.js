@@ -1,4 +1,6 @@
 import bcrypt from "bcryptjs";
+import { v2 as cloudinary } from "cloudinary";
+
 import User from "../models/user.model.js";
 
 export const getUserProfile = async (req, res) => {
