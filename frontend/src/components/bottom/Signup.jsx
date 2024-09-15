@@ -69,8 +69,11 @@ const Signup = () => {
   };
 
   return (
-    <>
-      <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4 bg-teal rounded-xl p-4 m-4">
+    <div
+      className="flex flex-col justify-center items-center w-dvw pattern-dots pattern-dot-color pattern-bg-mid-grey
+  pattern-size-2 pattern-opacity-100"
+    >
+      <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4 bg-teal rounded-xl m-4">
         <h2 className="self-center py-2 text-2xl text-wrap text-center text-white">
           Sign Up to find your next climbing partner
         </h2>
@@ -84,8 +87,8 @@ const Signup = () => {
           className="flex flex-col justify-center items-center"
           onSubmit={handleSubmit}
         >
-          <div className="flex max-w-lg mx-auto flex-row justify-center items-center text-white">
-            <div className="flex flex-col justify-center align-start">
+          <div className="flex max-w-lg mx-auto flex-row md:flex-col justify-center items-center text-white">
+            <div className="flex flex-col justify-center items-start md:items-center">
               <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -166,10 +169,10 @@ const Signup = () => {
                 />
               </label>
             </div>
-            <div className="flex flex-col justify-center align-start">
+            <div className="flex flex-col justify-center items-start md:items-center">
               <div className="label">
                 <span className="text-white label-text">
-                  Choose a preferred climbing style
+                  Choose a climbing style
                 </span>
               </div>
               <select
@@ -178,8 +181,8 @@ const Signup = () => {
                 value={formData.style}
                 name="style"
               >
-                <option hidden value="Choose a Climbing Style">
-                  Choose a Climbing Style
+                <option hidden value="Choose One">
+                  Choose One
                 </option>
                 <option value="Top Rope">Top Rope</option>
                 <option value="Lead Rope">Lead Rope</option>
@@ -194,8 +197,8 @@ const Signup = () => {
                 value={formData.gym}
                 name="gym"
               >
-                <option hidden value="Choose a Gym">
-                  Choose a Gym
+                <option hidden value="Choose One">
+                  Choose One
                 </option>
                 <option value="Timonium">Timonium</option>
                 <option value="Hampden">Hampden</option>
@@ -213,12 +216,12 @@ const Signup = () => {
               ></textarea>
             </div>
           </div>
-          <button className="btn  bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
-            Sign Up
+          <button className="btn m-4 bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
+            {isPending ? "Loading..." : "Sign Up"}
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

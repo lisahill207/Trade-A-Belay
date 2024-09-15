@@ -1,5 +1,4 @@
 import { React, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import logo from "../../images/movement.png";
 import { MdEdit } from "react-icons/md";

@@ -52,10 +52,13 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="grow login-form  flex flex-col justify-center align-center w-dvw p-4">
-        <h2 className="self-center py-2 text-2xl text-white">
-          Login to view profiles
+    <div
+      className="flex flex-col justify-center items-center w-dvw pattern-dots pattern-dot-color pattern-bg-mid-grey
+  pattern-size-2 pattern-opacity-100"
+    >
+      <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center bg-teal rounded-xl p-4 m-4">
+        <h2 className="self-center py-2 text-2xl text-wrap text-center text-white">
+          Login to view bios
         </h2>
 
         <p className="self-center py-2 text-white">
@@ -67,11 +70,11 @@ const Login = () => {
         </p>
         {isError && <p className="text-red text-center">{error.message}</p>}
         <form
-          className="flex flex-col justify-center align-center"
+          className="flex flex-col justify-center items-center"
           onSubmit={handleSubmit}
         >
           <div className="flex flex-col justify-center align-center ">
-            <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+            <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -90,7 +93,7 @@ const Login = () => {
                 value={formData.username}
               />
             </label>
-            <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+            <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -113,12 +116,12 @@ const Login = () => {
               />
             </label>
           </div>
-          <button className="w-content self-center btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey">
+          <button className="btn m-4 bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
             {isPending ? "Loading..." : "Login"}
           </button>
         </form>
       </div>
-    </>
+    </div>
   );
 };
 

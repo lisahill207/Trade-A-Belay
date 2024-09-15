@@ -45,8 +45,8 @@ const UpdateProfile = ({ authUser }) => {
           updateProfile(formData);
         }}
       >
-        <div className="flex max-w-lg mx-auto flex-row justify-center items-center text-white">
-          <div className="flex flex-col justify-center align-start">
+        <div className="flex max-w-lg mx-auto flex-row md:flex-col justify-center items-center text-white">
+          <div className="flex flex-col justify-center items-start md:items-center">
             <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -127,10 +127,10 @@ const UpdateProfile = ({ authUser }) => {
               />
             </label>
           </div>
-          <div className="flex flex-col justify-center align-start">
+          <div className="flex flex-col justify-center items-start md:items-center">
             <div className="label">
               <span className="text-white label-text">
-                Choose a preferred climbing style
+                Choose a climbing style
               </span>
             </div>
             <select
@@ -139,8 +139,8 @@ const UpdateProfile = ({ authUser }) => {
               value={formData.style}
               name="style"
             >
-              <option hidden value="Choose a Climbing Style">
-                Choose a Climbing Style
+              <option hidden value="Choose One">
+                Choose One
               </option>
               <option value="Top Rope">Top Rope</option>
               <option value="Lead Rope">Lead Rope</option>
@@ -155,8 +155,8 @@ const UpdateProfile = ({ authUser }) => {
               value={formData.gym}
               name="gym"
             >
-              <option hidden value="Choose a Gym">
-                Choose a Gym
+              <option hidden value="Choose One">
+                Choose One
               </option>
               <option value="Timonium">Timonium</option>
               <option value="Hampden">Hampden</option>
@@ -174,7 +174,7 @@ const UpdateProfile = ({ authUser }) => {
             ></textarea>
           </div>
         </div>
-        <button className="btn  bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
+        <button className="btn m-4 bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
           {isUpdatingProfile ? "Updating..." : "Update"}
         </button>
       </form>
