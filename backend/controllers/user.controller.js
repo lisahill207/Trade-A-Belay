@@ -27,8 +27,8 @@ export const updateUser = async (req, res) => {
     bio,
     gym,
     style,
-    profileImg,
   } = req.body;
+  let { profileImg } = req.body;
 
   const userId = req.user._id;
 
@@ -57,6 +57,15 @@ export const updateUser = async (req, res) => {
 
       const salt = await bcrypt.genSalt(10);
       user.password = await bcrypt.hash(newPassword, salt);
+    }
+    if (profileImg) {
+      if (user.profileImg) {
+        await cloudinary.uploader.destroy(
+          user.profileImg.split("/").pop().split(".")[0]
+        );
+      }
+      const uploadedResponse = await cloudinary.uploader.upload(profileImg);
+      profileImg = uploadedResponse.secure_url;
     }
 
     user.fullName = fullName || user.fullName;
