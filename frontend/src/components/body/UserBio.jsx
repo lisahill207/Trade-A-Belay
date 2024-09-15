@@ -66,7 +66,6 @@ const UserBio = () => {
           <h3 className="">
             {authUser?.style}, {authUser?.gym}
           </h3>
-          <p>{authUser?.phone}</p>
           <p>{authUser?.bio}</p>
         </div>
       </div>

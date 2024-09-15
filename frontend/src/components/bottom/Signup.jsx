@@ -70,7 +70,7 @@ const Signup = () => {
 
   return (
     <>
-      <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4">
+      <div className="grow max-w-lg mx-auto login-form flex flex-col justify-center content-center p-4 bg-teal rounded-xl p-4 m-4">
         <h2 className="self-center py-2 text-2xl text-wrap text-center text-white">
           Sign Up to find your next climbing partner
         </h2>
@@ -83,11 +83,10 @@ const Signup = () => {
         <form
           className="flex flex-col justify-center items-center"
           onSubmit={handleSubmit}
-          f
         >
           <div className="flex max-w-lg mx-auto flex-row justify-center items-center text-white">
             <div className="flex flex-col justify-center align-start">
-              <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+              <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -106,7 +105,7 @@ const Signup = () => {
                   value={formData.email}
                 />
               </label>
-              <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+              <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -125,7 +124,7 @@ const Signup = () => {
                   value={formData.username}
                 />
               </label>
-              <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+              <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -147,7 +146,7 @@ const Signup = () => {
                   value={formData.password}
                 />
               </label>
-              <label className="m-4 text-base self-center input input-bordered flex items-center gap-2">
+              <label className="bg-dark-blue m-4 text-base self-center input input-bordered flex items-center gap-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
@@ -169,12 +168,12 @@ const Signup = () => {
             </div>
             <div className="flex flex-col justify-center align-start">
               <div className="label">
-                <span className="label-text">
+                <span className="text-white label-text">
                   Choose a preferred climbing style
                 </span>
               </div>
               <select
-                className="select text-base mb-2 mx-4 select-bordered flex items-center gap-2"
+                className="bg-dark-blue select text-base mb-2 mx-4 select-bordered flex items-center gap-2"
                 onChange={handleInputChange}
                 value={formData.style}
                 name="style"
@@ -187,10 +186,10 @@ const Signup = () => {
                 <option value="Boulder">Boulder</option>
               </select>
               <div className="label">
-                <span className="label-text">Choose a Gym</span>
+                <span className="label-text text-white">Choose a Gym</span>
               </div>
               <select
-                className="select text-base mb-4 mx-4 select-bordered flex items-center gap-2"
+                className="bg-dark-blue select text-base mb-4 mx-4 select-bordered flex items-center gap-2"
                 onChange={handleInputChange}
                 value={formData.gym}
                 name="gym"
@@ -206,7 +205,7 @@ const Signup = () => {
                 <option value="Fairfax">Fairfax</option>
               </select>
               <textarea
-                className="textarea textarea-bordered text-base mx-4 self-center grow"
+                className="bg-dark-blue textarea textarea-bordered text-base mx-4 self-center grow"
                 placeholder="Bio"
                 onChange={handleInputChange}
                 value={formData.bio}
@@ -214,10 +213,9 @@ const Signup = () => {
               ></textarea>
             </div>
           </div>
-          <button className="justify-self-end btn bg-yellow text-dark-blue m-4 font-bold hover:bg-blue-grey">
-            {isPending ? "Loading..." : "Sign Up"}
+          <button className="btn  bg-dark-blue border-none rounded-full btn-sm text-white hover:bg-grey">
+            Sign Up
           </button>
-          {isError && <p className="text-red-500">{error.message}</p>}
         </form>
       </div>
     </>

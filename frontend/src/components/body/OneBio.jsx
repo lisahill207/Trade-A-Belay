@@ -17,7 +17,6 @@ const OneBio = ({ bio }) => {
           <h3 className="">
             {bio.style}, {bio.gym}
           </h3>
-          <p className="">{bio.phone}</p>
           <p>{bio.bio}</p>
         </div>
       </div>
