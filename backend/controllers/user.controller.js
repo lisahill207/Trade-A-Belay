@@ -27,6 +27,7 @@ export const updateUser = async (req, res) => {
     bio,
     gym,
     style,
+    phone,
   } = req.body;
   let { profileImg } = req.body;
 
@@ -74,6 +75,7 @@ export const updateUser = async (req, res) => {
     user.bio = bio || user.bio;
     user.gym = gym || user.gym;
     user.style = style || user.style;
+    user.phone = phone || user.phone;
     user.profileImg = profileImg || user.profileImg;
 
     user = await user.save();

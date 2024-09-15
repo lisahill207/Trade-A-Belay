@@ -4,12 +4,27 @@ import { generateTokenAndSetCookie } from "../lib/utils/generateToken.js";
 
 export const signup = async (req, res) => {
   try {
-    const { fullName, username, email, password, gym, style, bio, profileImg } =
-      req.body;
+    const {
+      fullName,
+      username,
+      email,
+      password,
+      gym,
+      style,
+      bio,
+      phone,
+      profileImg,
+    } = req.body;
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[+]{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$/;
+
     if (!emailRegex.test(email)) {
       return res.status(400).json({ error: "Invalid email format" });
+    }
+
+    if (!phoneRegex.test(phone)) {
+      return res.status(400).json({ error: "Invalid phone format" });
     }
 
     const existingUser = await User.findOne({ username });
@@ -39,6 +54,7 @@ export const signup = async (req, res) => {
       gym,
       style,
       bio,
+      phone,
       profileImg,
     });
 
@@ -55,6 +71,7 @@ export const signup = async (req, res) => {
         gym: newUser.gym,
         style: newUser.style,
         bio: newUser.bio,
+        phone: newUser.phone,
         profileImg: newUser.profileImg,
       });
     } else {
@@ -86,7 +103,6 @@ export const login = async (req, res) => {
       fullName: user.fullName,
       username: user.username,
       email: user.email,
-      profileImg: user.profileImg,
     });
   } catch (error) {
     console.log("Error in login controller", error.message);
